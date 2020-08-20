@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C52CE3D524EE1F1A00A3C7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */; };
-		C52CE3D724EE1F1A00A3C7F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE3D624EE1F1A00A3C7F9 /* SceneDelegate.swift */; };
 		C52CE3D924EE1F1A00A3C7F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE3D824EE1F1A00A3C7F9 /* ViewController.swift */; };
 		C52CE3DC24EE1F1A00A3C7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */; };
 		C52CE3DE24EE1F1E00A3C7F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */; };
 		C52CE3E124EE1F1E00A3C7F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DF24EE1F1E00A3C7F9 /* LaunchScreen.storyboard */; };
+		C5F5327924EE5EF100B1BF78 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327824EE5EF100B1BF78 /* BaseViewController.swift */; };
+		C5F5327B24EE727E00B1BF78 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */; };
+		C5F5327D24EE7D2E00B1BF78 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327C24EE7D2E00B1BF78 /* LoginViewController.swift */; };
+		C5F5327F24EE7E0C00B1BF78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327E24EE7E0C00B1BF78 /* Constants.swift */; };
 		F572C9F79BF03D2A0188518F /* Pods_FindWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E33E13FA0540ACFFB8B8F2 /* Pods_FindWorker.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +24,15 @@
 		5105A8C67C9E554539BFE608 /* Pods-FindWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWorker.debug.xcconfig"; path = "Target Support Files/Pods-FindWorker/Pods-FindWorker.debug.xcconfig"; sourceTree = "<group>"; };
 		C52CE3D124EE1F1A00A3C7F9 /* FindWorker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWorker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C52CE3D624EE1F1A00A3C7F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C52CE3D824EE1F1A00A3C7F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C52CE3DB24EE1F1A00A3C7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52CE3E024EE1F1E00A3C7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52CE3E224EE1F1E00A3C7F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5F5327824EE5EF100B1BF78 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		C5F5327C24EE7D2E00B1BF78 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C5F5327E24EE7E0C00B1BF78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FBD55000D5EBC55C209FB41E /* Pods-FindWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWorker.release.xcconfig"; path = "Target Support Files/Pods-FindWorker/Pods-FindWorker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,15 +77,26 @@
 		C52CE3D324EE1F1A00A3C7F9 /* FindWorker */ = {
 			isa = PBXGroup;
 			children = (
+				C5F5327724EE5ED200B1BF78 /* ViewControllers */,
 				C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */,
-				C52CE3D624EE1F1A00A3C7F9 /* SceneDelegate.swift */,
-				C52CE3D824EE1F1A00A3C7F9 /* ViewController.swift */,
 				C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */,
 				C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */,
 				C52CE3DF24EE1F1E00A3C7F9 /* LaunchScreen.storyboard */,
 				C52CE3E224EE1F1E00A3C7F9 /* Info.plist */,
+				C5F5327E24EE7E0C00B1BF78 /* Constants.swift */,
 			);
 			path = FindWorker;
+			sourceTree = "<group>";
+		};
+		C5F5327724EE5ED200B1BF78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5F5327824EE5EF100B1BF78 /* BaseViewController.swift */,
+				C52CE3D824EE1F1A00A3C7F9 /* ViewController.swift */,
+				C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */,
+				C5F5327C24EE7D2E00B1BF78 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FD3A1B95B728B5F6F6015ABE /* Pods */ = {
@@ -88,7 +105,6 @@
 				5105A8C67C9E554539BFE608 /* Pods-FindWorker.debug.xcconfig */,
 				FBD55000D5EBC55C209FB41E /* Pods-FindWorker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,6 +119,7 @@
 				C52CE3CD24EE1F1A00A3C7F9 /* Sources */,
 				C52CE3CE24EE1F1A00A3C7F9 /* Frameworks */,
 				C52CE3CF24EE1F1A00A3C7F9 /* Resources */,
+				C7EDC31723B36653E4979F1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +199,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7EDC31723B36653E4979F1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindWorker/Pods-FindWorker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindWorker/Pods-FindWorker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindWorker/Pods-FindWorker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -189,9 +223,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F5327D24EE7D2E00B1BF78 /* LoginViewController.swift in Sources */,
 				C52CE3D924EE1F1A00A3C7F9 /* ViewController.swift in Sources */,
+				C5F5327924EE5EF100B1BF78 /* BaseViewController.swift in Sources */,
 				C52CE3D524EE1F1A00A3C7F9 /* AppDelegate.swift in Sources */,
-				C52CE3D724EE1F1A00A3C7F9 /* SceneDelegate.swift in Sources */,
+				C5F5327F24EE7E0C00B1BF78 /* Constants.swift in Sources */,
+				C5F5327B24EE727E00B1BF78 /* LaunchScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
