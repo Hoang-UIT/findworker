@@ -12,7 +12,11 @@ import Foundation
 struct Constants {
     
     struct StoryboardID {
-        static let LoginScreen = "LoginViewController"
         static let launcherScreen = "LaunchScreenViewController"
+        static let LoginScreen = "LoginViewController"
+        static let registerScreen = "RegisterViewController"
+        static let forgetPasswordScreen = "ForgetPasswordViewController"
+        static let updatePasswordScreen = "UpdatePasswordViewController"
+        static let homeScreen = "HomeViewController"
     }
 }

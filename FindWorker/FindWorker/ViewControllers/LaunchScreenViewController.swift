@@ -16,7 +16,7 @@ class LaunchScreenViewController: BaseViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             let loginViewController = LoginViewController.instantiateViewController(Constants.StoryboardID.LoginScreen)
-            self.present(loginViewController, animated: true, completion: nil)
+            AppDelegate.setRootViewController(loginViewController)
         }
     }
 }

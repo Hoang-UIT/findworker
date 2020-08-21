@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,10 +12,18 @@
 		C52CE3DC24EE1F1A00A3C7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */; };
 		C52CE3DE24EE1F1E00A3C7F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */; };
 		C52CE3E124EE1F1E00A3C7F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DF24EE1F1E00A3C7F9 /* LaunchScreen.storyboard */; };
+		C5693FCC24EF7E8200D37F5A /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FCB24EF7E8200D37F5A /* ForgetPasswordViewController.swift */; };
+		C5693FCE24EF823600D37F5A /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FCD24EF823600D37F5A /* UpdatePasswordViewController.swift */; };
+		C5693FD024EFB6FA00D37F5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FCF24EFB6FA00D37F5A /* HomeViewController.swift */; };
+		C5693FD324EFB98800D37F5A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD224EFB98800D37F5A /* UIColor+Extension.swift */; };
+		C5693FD624EFC7CD00D37F5A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD524EFC7CD00D37F5A /* Service.swift */; };
+		C5693FD824EFC93E00D37F5A /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD724EFC93E00D37F5A /* ServiceTableViewCell.swift */; };
+		C5693FDA24EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD924EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift */; };
 		C5F5327924EE5EF100B1BF78 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327824EE5EF100B1BF78 /* BaseViewController.swift */; };
 		C5F5327B24EE727E00B1BF78 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */; };
 		C5F5327D24EE7D2E00B1BF78 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327C24EE7D2E00B1BF78 /* LoginViewController.swift */; };
 		C5F5327F24EE7E0C00B1BF78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5327E24EE7E0C00B1BF78 /* Constants.swift */; };
+		C5FACEC224EF74950023A282 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FACEC124EF74950023A282 /* RegisterViewController.swift */; };
 		F572C9F79BF03D2A0188518F /* Pods_FindWorker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E33E13FA0540ACFFB8B8F2 /* Pods_FindWorker.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,10 +37,18 @@
 		C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52CE3E024EE1F1E00A3C7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52CE3E224EE1F1E00A3C7F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5693FCB24EF7E8200D37F5A /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		C5693FCD24EF823600D37F5A /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePasswordViewController.swift; sourceTree = "<group>"; };
+		C5693FCF24EFB6FA00D37F5A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C5693FD224EFB98800D37F5A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C5693FD524EFC7CD00D37F5A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		C5693FD724EFC93E00D37F5A /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		C5693FD924EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Badge.swift.swift"; sourceTree = "<group>"; };
 		C5F5327824EE5EF100B1BF78 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		C5F5327C24EE7D2E00B1BF78 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C5F5327E24EE7E0C00B1BF78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C5FACEC124EF74950023A282 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FBD55000D5EBC55C209FB41E /* Pods-FindWorker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWorker.release.xcconfig"; path = "Target Support Files/Pods-FindWorker/Pods-FindWorker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +93,8 @@
 		C52CE3D324EE1F1A00A3C7F9 /* FindWorker */ = {
 			isa = PBXGroup;
 			children = (
+				C5693FD424EFC7C200D37F5A /* Models */,
+				C5693FD124EFB97300D37F5A /* Extensions */,
 				C5F5327724EE5ED200B1BF78 /* ViewControllers */,
 				C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */,
 				C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */,
@@ -88,6 +106,23 @@
 			path = FindWorker;
 			sourceTree = "<group>";
 		};
+		C5693FD124EFB97300D37F5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5693FD224EFB98800D37F5A /* UIColor+Extension.swift */,
+				C5693FD924EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5693FD424EFC7C200D37F5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5693FD524EFC7CD00D37F5A /* Service.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C5F5327724EE5ED200B1BF78 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +130,11 @@
 				C52CE3D824EE1F1A00A3C7F9 /* ViewController.swift */,
 				C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */,
 				C5F5327C24EE7D2E00B1BF78 /* LoginViewController.swift */,
+				C5FACEC124EF74950023A282 /* RegisterViewController.swift */,
+				C5693FCB24EF7E8200D37F5A /* ForgetPasswordViewController.swift */,
+				C5693FCD24EF823600D37F5A /* UpdatePasswordViewController.swift */,
+				C5693FCF24EFB6FA00D37F5A /* HomeViewController.swift */,
+				C5693FD724EFC93E00D37F5A /* ServiceTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,9 +265,17 @@
 			files = (
 				C5F5327D24EE7D2E00B1BF78 /* LoginViewController.swift in Sources */,
 				C52CE3D924EE1F1A00A3C7F9 /* ViewController.swift in Sources */,
+				C5693FCE24EF823600D37F5A /* UpdatePasswordViewController.swift in Sources */,
+				C5693FD324EFB98800D37F5A /* UIColor+Extension.swift in Sources */,
+				C5FACEC224EF74950023A282 /* RegisterViewController.swift in Sources */,
+				C5693FD624EFC7CD00D37F5A /* Service.swift in Sources */,
 				C5F5327924EE5EF100B1BF78 /* BaseViewController.swift in Sources */,
+				C5693FD024EFB6FA00D37F5A /* HomeViewController.swift in Sources */,
 				C52CE3D524EE1F1A00A3C7F9 /* AppDelegate.swift in Sources */,
+				C5693FDA24EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift in Sources */,
 				C5F5327F24EE7E0C00B1BF78 /* Constants.swift in Sources */,
+				C5693FCC24EF7E8200D37F5A /* ForgetPasswordViewController.swift in Sources */,
+				C5693FD824EFC93E00D37F5A /* ServiceTableViewCell.swift in Sources */,
 				C5F5327B24EE727E00B1BF78 /* LaunchScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

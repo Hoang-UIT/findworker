@@ -20,17 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         
         let launcherScreenViewController = LaunchScreenViewController.instantiateViewController(Constants.StoryboardID.launcherScreen)
-        _ = setRootViewController(launcherScreenViewController)
+        AppDelegate.setRootViewController(launcherScreenViewController)
         return true
     }
     
-    func setRootViewController(_ viewController: UIViewController?) -> Bool {
+    class func setRootViewController(_ viewController: UIViewController?) {
         guard let viewController = viewController else {
-            return false
+            return
         }
+        UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: nil)
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
-        return true
+    }
+    
+    class func dismissToRootViewController() {
+        UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: nil)
     }
 }
 
