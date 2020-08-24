@@ -49,7 +49,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-rm-rbO">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" textContentType="tel"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jR7-F1-FRf">
                                         <rect key="frame" x="0.0" y="60" width="315" height="50"/>
@@ -309,7 +309,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gIW-FC-1aB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gIW-FC-1aB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -392,7 +392,7 @@
                     <navigationItem key="navigationItem" title="Trang chủ" id="5qx-oC-dPJ"/>
                     <connections>
                         <outlet property="nextButton" destination="fIO-PN-ZLO" id="aFX-gc-7MQ"/>
-                        <outlet property="tableView" destination="gIW-FC-1aB" id="rvO-h5-D7V"/>
+                        <outlet property="tableView" destination="gIW-FC-1aB" id="iVa-FB-fUL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQG-dp-iLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

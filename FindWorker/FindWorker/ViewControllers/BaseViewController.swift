@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: ViewController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,3 +29,4 @@ class BaseViewController: ViewController {
         view.endEditing(true)
     }
 }
+    
