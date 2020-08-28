@@ -9,14 +9,36 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    
+    var titleViewController = ""
+    var tapGestureEndEditing: UITapGestureRecognizer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        tapGestureEndEditing = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGestureEndEditing ?? UITapGestureRecognizer())
+        if (navigationController != nil) {
+            navigationController?.navigationBar.tintColor = UIColor.init(hex: "#34C759ff")
+            navigationController?.navigationBar.barTintColor = UIColor.white
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.init(hex: "#34C759ff") ?? UIColor.white]
+        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = titleViewController
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
+    }
+    
+    func removeTapGestureEndEditing() {
+        if let tap = tapGestureEndEditing {
+            view.removeGestureRecognizer(tap)
+        }
+    }
     
     class func instantiateViewController(_ indentifier: String) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -29,4 +51,4 @@ class BaseViewController: UIViewController {
         view.endEditing(true)
     }
 }
-    
+

@@ -23,7 +23,6 @@ class LoginViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         userNameTF.becomeFirstResponder()
-        view.endEditing(true)
     }
     
     

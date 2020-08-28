@@ -18,5 +18,16 @@ struct Constants {
         static let forgetPasswordScreen = "ForgetPasswordViewController"
         static let updatePasswordScreen = "UpdatePasswordViewController"
         static let homeScreen = "HomeViewController"
+        static let serviceDetailScreen = "ServiceDetailViewController"
+        static let WorkInfoScreen = "WorkInfoViewController"
+        static let LocationWorkScreen = "LocationWorkViewController"
+        static let MapScreen = "MapViewController"
+        static let ListWorkerScreen = "ListWorkerViewController"
+        static let WorkerDetailScreen = "WorkerDetailViewController"
+        static let ConfirmOrderScreen = "ConfirmOrderViewController"
+    }
+    
+    struct ColorApp {
+        static let mainColor = UIColor.init(hex: "#34C759ff")
     }
 }

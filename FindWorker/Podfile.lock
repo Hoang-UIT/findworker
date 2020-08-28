@@ -1,16 +1,24 @@
 PODS:
+  - DateTimePicker (2.4.1)
   - IQKeyboardManagerSwift (6.5.6)
+  - SwiftyStarRatingView (1.0.4)
 
 DEPENDENCIES:
+  - DateTimePicker
   - IQKeyboardManagerSwift
+  - SwiftyStarRatingView
 
 SPEC REPOS:
   trunk:
+    - DateTimePicker
     - IQKeyboardManagerSwift
+    - SwiftyStarRatingView
 
 SPEC CHECKSUMS:
+  DateTimePicker: 997176ea28954f3c18817b9565a53b28ee4400b8
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
 
-PODFILE CHECKSUM: fea467e762f1fb96bc7036830cb4f6b52d86b2be
+PODFILE CHECKSUM: f1980fde87e81bdc3b9e43b0c37c8552a0ebfb8f
 
 COCOAPODS: 1.8.4

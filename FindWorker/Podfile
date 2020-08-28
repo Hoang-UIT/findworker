@@ -8,5 +8,6 @@ target 'FindWorker' do
   # Pods for FindWorker
   
   pod 'IQKeyboardManagerSwift'
-
+  pod 'SwiftyStarRatingView'
+  pod 'DateTimePicker'
 end
