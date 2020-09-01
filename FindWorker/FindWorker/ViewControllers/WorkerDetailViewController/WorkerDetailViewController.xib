@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WorkerDetailViewController" customModule="FindWorker" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="V6W-Zg-RDC" id="zcR-mS-KmP"/>
+                <outlet property="view" destination="piL-BL-uqC" id="nJP-Pt-7x6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="piL-BL-uqC">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ltr-mG-O5m">
+                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcu-jd-dZW">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="aZ8-s6-phE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                            <state key="normal" title="QUAY LẠI">
+                                <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="uMP-7S-Bpq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scn-Iq-A23">
+                            <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Kpt-CI-yGg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="CHỌN THỢ">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="selectWorkerBtnAction:" destination="-1" eventType="touchUpInside" id="kbS-Er-zUX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V6W-Zg-RDC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="SnV-qy-jqI" firstAttribute="trailing" secondItem="V6W-Zg-RDC" secondAttribute="trailing" id="Du4-K1-yf7"/>
+                <constraint firstItem="V6W-Zg-RDC" firstAttribute="top" secondItem="SnV-qy-jqI" secondAttribute="top" id="SLM-Ag-sSr"/>
+                <constraint firstItem="ltr-mG-O5m" firstAttribute="top" secondItem="V6W-Zg-RDC" secondAttribute="bottom" id="VYQ-jP-pns"/>
+                <constraint firstItem="SnV-qy-jqI" firstAttribute="trailing" secondItem="ltr-mG-O5m" secondAttribute="trailing" id="WIH-l2-AJo"/>
+                <constraint firstItem="SnV-qy-jqI" firstAttribute="bottom" secondItem="ltr-mG-O5m" secondAttribute="bottom" id="Xxi-ty-Nmy"/>
+                <constraint firstItem="V6W-Zg-RDC" firstAttribute="leading" secondItem="SnV-qy-jqI" secondAttribute="leading" id="frt-4x-ZKC"/>
+                <constraint firstItem="ltr-mG-O5m" firstAttribute="leading" secondItem="piL-BL-uqC" secondAttribute="leading" id="ve9-rZ-R7N"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SnV-qy-jqI"/>
+            <point key="canvasLocation" x="36" y="35"/>
+        </view>
+    </objects>
+</document>

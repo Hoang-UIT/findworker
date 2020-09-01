@@ -1,5 +1,5 @@
 //
-//  ForgetPasswordViewController.swift
+//  RegisterViewController.swift
 //  FindWorker
 //
 //  Created by hoangtp on 8/21/20.
@@ -8,15 +8,13 @@
 
 import UIKit
 
-class ForgetPasswordViewController: BaseViewController {
-
+class RegisterViewController: BaseViewController {
+    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var phoneNumberTF: UITextField!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        nextButton.layer.cornerRadius = 5.0
-        
+        super.viewDidLoad()        
         phoneNumberTF.addTarget(self, action: #selector(phoneNumberTextFieldDidChangeValue(_:)), for: .editingChanged)
     }
     
@@ -38,10 +36,16 @@ class ForgetPasswordViewController: BaseViewController {
     }
     
     @IBAction func nextBtnAction(_ sender: UIButton) {
-        
+        let viewController = UpdatePasswordViewController.loadFromNib()
+        viewController.type = .Register
+        present(viewController, animated: true, completion: nil)
     }
-
+    
     @IBAction func cancelBtnAction(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    
 }

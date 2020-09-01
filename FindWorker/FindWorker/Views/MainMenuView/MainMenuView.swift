@@ -13,50 +13,16 @@ protocol MainMenuViewDelegate: class {
     func mainMenuView(_ view: MainMenuView, type: MainMenuView.MenuType)
 }
 
-class MainMenuView: UIView {
+class MainMenuView: BaseView {
     enum MenuType {
         case UserInfo
         case OrderInfo
         case Setting
     }
     
-    let nibName = "MainMenuView"
     weak var delegate: MainMenuViewDelegate?
     
     @IBOutlet weak var contentView: UIView!
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    func commonInit() {
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-    }
-    
-    func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-            return nil
-        }
-        return view
-    }
-    
-    func showViewInWindow() {
-        guard let window =  UIApplication.shared.windows.first else {
-            return
-        }
-        self.frame = window.frame
-        window.addSubview(self)
-    }
-    
 
     @IBAction func infoUserBtnAction(_ sender: UIButton) {
         if delegate != nil {

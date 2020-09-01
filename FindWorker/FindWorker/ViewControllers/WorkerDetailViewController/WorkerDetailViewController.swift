@@ -16,6 +16,8 @@ class WorkerDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(UINib(nibName: "WorkerInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "WorkerInfoTableViewCell")
+        tableView.register(UINib(nibName: "CommentTableViewCell", bundle: nil), forCellReuseIdentifier: "CommentTableViewCell")
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableView.automaticDimension
@@ -25,6 +27,7 @@ class WorkerDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         title = "Thông Tin Của Thợ"
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

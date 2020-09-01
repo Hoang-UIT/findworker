@@ -81,6 +81,8 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="value">
                             <real key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="accurateHalfStars" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XDd-oh-qFR">

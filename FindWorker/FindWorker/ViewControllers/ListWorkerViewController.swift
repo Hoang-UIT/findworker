@@ -21,7 +21,7 @@ class ListWorkerViewController: BaseViewController {
         
         rightBarButton = UIBarButtonItem(image: UIImage(named: "filter_worker_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showFilter))
         navigationItem.rightBarButtonItem = rightBarButton
-        
+        tableView.register(UINib(nibName: "WorkerTableViewCell", bundle: nil), forCellReuseIdentifier: "WorkerTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 180.0
@@ -74,10 +74,8 @@ extension ListWorkerViewController: UITableViewDataSource {
 extension ListWorkerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
-        if let viewController = WorkerDetailViewController.instantiateViewController(Constants.StoryboardID.WorkerDetailScreen) as? WorkerDetailViewController {
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+        let viewController = WorkerDetailViewController.loadFromNib()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

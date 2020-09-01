@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterWorkerView" customModule="FindWorker" customModuleProvider="target">
             <connections>
                 <outlet property="experienceSegment" destination="fC1-2h-NMw" id="y5n-v6-SJx"/>
-                <outlet property="moneySegment" destination="hy2-Gy-Bqt" id="nxn-S4-iF9"/>
                 <outlet property="ratingSegment" destination="7lk-MD-et2" id="6oi-m3-ax6"/>
             </connections>
         </placeholder>
@@ -28,35 +27,13 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdj-C2-R3L">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tVJ-b6-ZN1">
-                            <rect key="frame" x="20" y="20" width="335" height="260"/>
+                            <rect key="frame" x="20" y="20" width="335" height="160"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5SV-BU-WM0">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="73.5"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiền Công" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTx-84-fuV">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-Gy-Bqt">
-                                            <rect key="frame" x="0.0" y="19.5" width="335" height="55"/>
-                                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <segments>
-                                                <segment title="$"/>
-                                                <segment title="$$"/>
-                                                <segment title="$$$"/>
-                                                <segment title="Tất Cả"/>
-                                            </segments>
-                                            <color key="selectedSegmentTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </segmentedControl>
-                                    </subviews>
-                                </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bgd-fP-ISh">
-                                    <rect key="frame" x="0.0" y="93.5" width="335" height="73"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kinh nghiệm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQ1-gZ-SSy">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
@@ -65,11 +42,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fC1-2h-NMw">
-                                            <rect key="frame" x="0.0" y="19.5" width="335" height="54.5"/>
+                                            <rect key="frame" x="0.0" y="19.5" width="335" height="51.5"/>
                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <segments>
                                                 <segment title="1 năm"/>
-                                                <segment title="&gt; 3 năm"/>
+                                                <segment title="2 - 5 năm"/>
                                                 <segment title="&gt; 5 năm"/>
                                                 <segment title="Tất Cả"/>
                                             </segments>
@@ -78,7 +55,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uhj-wK-q7z">
-                                    <rect key="frame" x="0.0" y="186.5" width="335" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="90" width="335" height="70"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đánh giá" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Js-ti-Bc6">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
@@ -87,20 +64,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7lk-MD-et2">
-                                            <rect key="frame" x="0.0" y="19.5" width="335" height="55"/>
+                                            <rect key="frame" x="0.0" y="19.5" width="335" height="51.5"/>
                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <segments>
                                                 <segment>
-                                                    <string key="title">3+
+                                                    <string key="title">⭑
+⭑⭑</string>
+                                                </segment>
+                                                <segment>
+                                                    <string key="title">⭑⭑
+⭑⭑</string>
+                                                </segment>
+                                                <segment>
+                                                    <string key="title">⭑⭑
 ⭑⭑⭑</string>
-                                                </segment>
-                                                <segment>
-                                                    <string key="title">4+
-⭑⭑⭑⭑</string>
-                                                </segment>
-                                                <segment>
-                                                    <string key="title">5
-⭑⭑⭑⭑⭑</string>
                                                 </segment>
                                                 <segment title="Tất cả"/>
                                             </segments>
@@ -114,7 +91,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="tVJ-b6-ZN1" secondAttribute="trailing" constant="20" id="3Pg-7c-yfd"/>
-                        <constraint firstAttribute="height" constant="300" id="M2H-Vr-myF"/>
+                        <constraint firstAttribute="height" constant="200" id="M2H-Vr-myF"/>
                         <constraint firstItem="tVJ-b6-ZN1" firstAttribute="leading" secondItem="Hdj-C2-R3L" secondAttribute="leading" constant="20" id="QAH-xv-39r"/>
                         <constraint firstItem="tVJ-b6-ZN1" firstAttribute="top" secondItem="Hdj-C2-R3L" secondAttribute="top" constant="20" id="chH-jt-fch"/>
                         <constraint firstAttribute="bottom" secondItem="tVJ-b6-ZN1" secondAttribute="bottom" constant="20" id="sWq-MV-Qw3"/>

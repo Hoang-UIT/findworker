@@ -9,15 +9,30 @@
 import UIKit
 
 class UpdatePasswordViewController: BaseViewController {
+    enum UpdatePasswordType {
+        case Register
+        case ForgetPassword
+    }
     
+    @IBOutlet weak var titleHeaderLabel: UILabel!
     @IBOutlet weak var otpTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var verifyPasswordTF: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    var type: UpdatePasswordType = .Register
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextButton.layer.cornerRadius = 5.0
+        
+        switch type {
+        case .Register:
+            titleHeaderLabel.text = "Nhập Mật Khẩu"
+            break
+        case .ForgetPassword:
+            titleHeaderLabel.text = "Cập Nhật Mật Khẩu"
+            break
+        }
         
         otpTF.addTarget(self, action: #selector(phoneNumberTextFieldDidChangeValue(_:)), for: .editingChanged)
         passwordTF.addTarget(self, action: #selector(phoneNumberTextFieldDidChangeValue(_:)), for: .editingChanged)

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="FindWorker" customModuleProvider="target">
+            <connections>
+                <outlet property="nextButton" destination="hr9-AO-5IT" id="nQJ-l0-uqg"/>
+                <outlet property="phoneNumberTF" destination="Jms-6c-fk5" id="kFk-mb-GmL"/>
+                <outlet property="view" destination="XlS-MD-Fvc" id="6i5-qQ-KT6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XlS-MD-Fvc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-jF-A8G">
+                    <rect key="frame" x="30" y="253" width="354" height="230"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng nhập số điện thoại của bạn" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kT-2J-TOk">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jms-6c-fk5">
+                            <rect key="frame" x="0.0" y="60" width="354" height="50"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                        </textField>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr9-AO-5IT">
+                            <rect key="frame" x="0.0" y="120" width="354" height="50"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="zhq-d7-2ak"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                            <state key="normal" title="TIẾP TỤC">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="nextBtnAction:" destination="-1" eventType="touchUpInside" id="jky-qH-t2e"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmr-or-lsz">
+                            <rect key="frame" x="0.0" y="180" width="354" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ASr-Di-9tK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                            <state key="normal" title="Hủy">
+                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtnAction:" destination="-1" eventType="touchUpInside" id="ii1-oY-P8l"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng Ký" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZS-ay-ArG">
+                    <rect key="frame" x="167.33333333333334" y="30" width="79.333333333333343" height="27.333333333333329"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                    <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5n-Xf-S40" customClass="TermsAndPolicyView" customModule="FindWorker" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="671.66666666666663" width="414" height="64.333333333333371"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="E6c-jF-A8G" secondAttribute="trailing" constant="30" id="4dd-qK-AhN"/>
+                <constraint firstItem="E6c-jF-A8G" firstAttribute="centerY" secondItem="XlS-MD-Fvc" secondAttribute="centerY" id="JGZ-BM-6cT"/>
+                <constraint firstItem="zw4-aP-Vp9" firstAttribute="trailing" secondItem="s5n-Xf-S40" secondAttribute="trailing" id="NgA-A7-aLZ"/>
+                <constraint firstItem="XZS-ay-ArG" firstAttribute="centerX" secondItem="XlS-MD-Fvc" secondAttribute="centerX" id="cdP-nh-rGf"/>
+                <constraint firstItem="zw4-aP-Vp9" firstAttribute="bottom" secondItem="s5n-Xf-S40" secondAttribute="bottom" id="cix-DF-VAL"/>
+                <constraint firstItem="E6c-jF-A8G" firstAttribute="leading" secondItem="zw4-aP-Vp9" secondAttribute="leading" constant="30" id="iKd-kX-Yan"/>
+                <constraint firstItem="XZS-ay-ArG" firstAttribute="top" secondItem="zw4-aP-Vp9" secondAttribute="top" constant="30" id="lvz-Uv-jtH"/>
+                <constraint firstItem="s5n-Xf-S40" firstAttribute="leading" secondItem="zw4-aP-Vp9" secondAttribute="leading" id="vMo-Zc-W4G"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="zw4-aP-Vp9"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.239130434782609"/>
+        </view>
+    </objects>
+</document>

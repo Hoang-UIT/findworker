@@ -40,22 +40,26 @@ class LoginViewController: BaseViewController {
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
         print("login")
-        let homeViewController = HomeViewController.instantiateViewController(Constants.StoryboardID.homeScreen)
+        let homeViewController = HomeViewController.loadFromNib()
         let navi = UINavigationController(rootViewController: homeViewController)
         present(navi, animated: true, completion: nil)
     }
     
     @IBAction func registerBtnAction(_ sender: UIButton) {
         print("register")
+        let viewController = RegisterViewController.loadFromNib()
+        present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func forgetPasswordBtnAction(_ sender: UIButton) {
         print("Forget password")
+        let viewController = ForgetPasswordViewController.loadFromNib()
+        present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func skipBtnAction(_ sender: UIButton) {
         print("skip")
-        let homeViewController = HomeViewController.instantiateViewController(Constants.StoryboardID.homeScreen)
+        let homeViewController = HomeViewController.loadFromNib()
         let navi = UINavigationController(rootViewController: homeViewController)
         present(navi, animated: true, completion: nil)
     }

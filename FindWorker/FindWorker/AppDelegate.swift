@@ -33,8 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
-    class func dismissToRootViewController() {
-        UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: nil)
+    class func dismissToRootViewController(_ completionHalder:((_ rootViewController: UIViewController?)->())? = nil) {
+        UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: false, completion: {
+            let rootViewController = UIApplication.shared.windows.first?.rootViewController
+            completionHalder?(rootViewController)
+        })
+        
     }
 }
 

@@ -9,13 +9,11 @@
 import UIKit
 
 class LaunchScreenViewController: BaseViewController {
-
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let loginViewController = LoginViewController.instantiateViewController(Constants.StoryboardID.LoginScreen)
+            let loginViewController = LoginViewController.loadFromNib()
             AppDelegate.setRootViewController(loginViewController)
         }
     }

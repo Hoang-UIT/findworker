@@ -28,6 +28,6 @@ struct Constants {
     }
     
     struct ColorApp {
-        static let mainColor = UIColor.init(hex: "#34C759ff")
+        static let mainColor = UIColor.init(hex: "#34C759ff") ?? UIColor.black
     }
 }

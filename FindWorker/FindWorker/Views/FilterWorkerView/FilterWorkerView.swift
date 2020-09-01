@@ -13,8 +13,6 @@ protocol FilterWorkerViewDelegate: class {
 }
 
 class FilterWorkerView: UIView {
-
-    @IBOutlet weak var moneySegment: UISegmentedControl!
     @IBOutlet weak var experienceSegment: UISegmentedControl!
     @IBOutlet weak var ratingSegment: UISegmentedControl!
     
@@ -36,9 +34,6 @@ class FilterWorkerView: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
-        
-        moneySegment.setSegmentStyle()
-        moneySegment.selectedSegmentIndex = moneySegment.numberOfSegments - 1
         
         experienceSegment.setSegmentStyle()
         experienceSegment.selectedSegmentIndex = experienceSegment.numberOfSegments - 1

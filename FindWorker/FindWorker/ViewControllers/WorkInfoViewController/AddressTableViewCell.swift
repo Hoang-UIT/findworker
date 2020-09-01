@@ -1,14 +1,14 @@
 //
-//  CommentTableViewCell.swift
+//  AddressTableViewCell.swift
 //  FindWorker
 //
-//  Created by hoangtp on 8/26/20.
+//  Created by hoangtp on 9/1/20.
 //  Copyright © 2020 Rakumo. All rights reserved.
 //
 
 import UIKit
 
-class CommentTableViewCell: UITableViewCell {
+class AddressTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,10 +10,13 @@ import UIKit
 import DateTimePicker
 
 class WorkInfoViewController: BaseViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         removeTapGestureEndEditing()
+        tableView.register(UINib(nibName: "AddressTableViewCell", bundle: nil), forCellReuseIdentifier: "AddressTableViewCell")
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,28 +35,33 @@ class WorkInfoViewController: BaseViewController {
         let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
         picker.isDatePickerOnly = true
         picker.dateFormat = "dd/MM/YYYY"
-        picker.highlightColor = Constants.ColorApp.mainColor ?? UIColor.darkGray
-        picker.doneBackgroundColor = Constants.ColorApp.mainColor ?? UIColor.darkGray
+        picker.highlightColor = Constants.ColorApp.mainColor
+        picker.doneBackgroundColor = Constants.ColorApp.mainColor
         picker.show()
     }
     
     @IBAction func locationBtnAction(_ sender: UIButton) {
-        if let viewController = LocationWorkViewController.instantiateViewController(Constants.StoryboardID.LocationWorkScreen) as? LocationWorkViewController {
-            navigationController?.pushViewController(viewController, animated: true)
+        if let viewController = MapViewController.instantiateViewController(Constants.StoryboardID.MapScreen) as? MapViewController {
+            present(viewController, animated: true, completion: nil)
         }
     }
     
     @IBAction func startDateBtnAction(_ sender: UIButton) {
         showDateTimePicker()
     }
-    
-    @IBAction func endDateBtnAction(_ sender: UIButton) {
-        showDateTimePicker()
+    @IBAction func nextBtnAction(_ sender: UIButton) {
+        let viewController = ListWorkerViewController.loadFromNib()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension WorkInfoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     
-    @IBAction func nextBtnAction(_ sender: UIButton) {
-        if let viewController = ListWorkerViewController.instantiateViewController(Constants.StoryboardID.ListWorkerScreen) as? ListWorkerViewController {
-                   navigationController?.pushViewController(viewController, animated: true)       
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddressTableViewCell", for: indexPath)
+        return cell
     }
 }

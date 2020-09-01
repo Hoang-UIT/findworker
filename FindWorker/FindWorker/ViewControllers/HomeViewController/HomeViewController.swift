@@ -32,10 +32,12 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleViewController = "Trang Chủ"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showMainMenu))
         rightBarButton = UIBarButtonItem(image: UIImage(named: "order_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
         navigationItem.rightBarButtonItem = rightBarButton
         
+        tableView.register(UINib(nibName: "ServiceTableViewCell", bundle: nil), forCellReuseIdentifier: "ServiceTableViewCell")
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -44,25 +46,15 @@ class HomeViewController: BaseViewController {
         removeTapGestureEndEditing()
     }
     
-    @objc func showMainMenu() {
-        let menuView = MainMenuView()
-        menuView.delegate = self
-        menuView.showViewInWindow()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        title = "Trang Chủ"
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updateBadgeOfShopCart(nil)
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        title = ""
+
+    @objc func showMainMenu() {
+        let menuView = MainMenuView()
+        menuView.delegate = self
+        menuView.showViewInWindow()
     }
     
     func updateBadgeOfShopCart(_ serviceDetail: ServiceDetailModel?) {
@@ -81,9 +73,8 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func nextBtnAction(_ sender: UIButton) {
-        if let viewController = WorkInfoViewController.instantiateViewController(Constants.StoryboardID.WorkInfoScreen) as? WorkInfoViewController {
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+        let viewController = WorkInfoViewController.loadFromNib()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
