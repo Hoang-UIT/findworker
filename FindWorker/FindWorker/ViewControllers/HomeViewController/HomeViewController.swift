@@ -121,13 +121,11 @@ extension HomeViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         
         let service = services[indexPath.section]
-        
-        if let serviceDetailViewController = ServiceDetailViewController.instantiateViewController(Constants.StoryboardID.serviceDetailScreen) as? ServiceDetailViewController {
-            serviceDetailViewController.delegate = self
-            serviceDetailViewController.service = service
-            serviceDetailViewController.serviceDetail = service.listServiceDetail[indexPath.row]
-            navigationController?.pushViewController(serviceDetailViewController, animated: true)
-        }
+        let serviceDetailViewController = ServiceDetailViewController.loadFromNib()
+        serviceDetailViewController.delegate = self
+        serviceDetailViewController.service = service
+        serviceDetailViewController.serviceDetail = service.listServiceDetail[indexPath.row]
+        navigationController?.pushViewController(serviceDetailViewController, animated: true)
     }
 }
 

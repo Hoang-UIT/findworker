@@ -12,11 +12,13 @@ class ListOrderViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var statusOrder = StatusOrder.status_7
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         removeTapGestureEndEditing()
-        titleViewController = "Chờ Xử Lý"
-        let rightBarButton = UIBarButtonItem(image: UIImage(named: "order_type_2_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showTypeOrder))
+        titleViewController = statusOrder.localized
+        let rightBarButton = UIBarButtonItem(image: UIImage(named: "order_type_green_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showTypeOrder))
         navigationItem.rightBarButtonItem = rightBarButton
         tableView.register(UINib(nibName: "OrderItemTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderItemTableViewCell")
         tableView.estimatedRowHeight = 80.0
@@ -28,6 +30,8 @@ class ListOrderViewController: BaseViewController {
     
     @objc func showTypeOrder() {
         let view = FilterOrderView()
+        view.statusOrder = statusOrder
+        view.delegate = self
         view.showViewInWindow()
     }
 
@@ -51,5 +55,13 @@ extension ListOrderViewController: UITableViewDataSource, UITableViewDelegate {
         let viewController = ConfirmOrderViewController.loadFromNib()
         viewController.isHiddenBottomContentView = true
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ListOrderViewController: FilterOrderViewDelegate {
+    func filterOrderView(_ view: FilterOrderView, _ statusSelected: StatusOrder) {
+        statusOrder = statusSelected
+        titleViewController = statusSelected.localized
+        title = statusSelected.localized
     }
 }

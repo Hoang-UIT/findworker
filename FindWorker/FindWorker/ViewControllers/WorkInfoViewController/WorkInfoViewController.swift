@@ -30,9 +30,11 @@ class WorkInfoViewController: BaseViewController {
     }
     
     func showDateTimePicker() {
-        let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
-        let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
+        
+        let min = Date().addingTimeInterval(-60 * 60 * 24 * 0)
+        let max = Date().addingTimeInterval(60 * 60 * 24 * 60)
         let picker = DateTimePicker.create(minimumDate: min, maximumDate: max)
+        picker.includesMonth = true
         picker.isDatePickerOnly = true
         picker.dateFormat = "dd/MM/YYYY"
         picker.highlightColor = Constants.ColorApp.mainColor
@@ -41,9 +43,8 @@ class WorkInfoViewController: BaseViewController {
     }
     
     @IBAction func locationBtnAction(_ sender: UIButton) {
-        if let viewController = MapViewController.instantiateViewController(Constants.StoryboardID.MapScreen) as? MapViewController {
-            present(viewController, animated: true, completion: nil)
-        }
+        let viewController = MapViewController.loadFromNib()
+        present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func startDateBtnAction(_ sender: UIButton) {

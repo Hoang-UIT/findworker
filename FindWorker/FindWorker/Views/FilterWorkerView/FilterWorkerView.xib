@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterWorkerView" customModule="FindWorker" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="Hdj-C2-R3L" id="rdQ-si-HF4"/>
                 <outlet property="experienceSegment" destination="fC1-2h-NMw" id="y5n-v6-SJx"/>
                 <outlet property="ratingSegment" destination="7lk-MD-et2" id="6oi-m3-ax6"/>
             </connections>

@@ -8,43 +8,26 @@
 
 import UIKit
 
-class PaymenMethodView: UIView {
+class PaymenMethodView: BaseView {
     
-    let nibName = "PaymenMethodView"
-        
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
+    @IBOutlet weak var contentView: UIView!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    func commonInit() {
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-    }
-    
-    func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-            return nil
-        }
-        return view
-    }
-    
-    func showViewInWindow() {
-        guard let window =  UIApplication.shared.windows.first else {
-            return
-        }
-        self.frame = window.frame
-        window.addSubview(self)
+    override func showViewInWindow() {
+        super.showViewInWindow()
+        contentView.frame.origin.y += 100
+        self.alpha = 0.0
+        UIView.animate(withDuration: 0.5, animations: {
+            self.contentView.frame.origin.y -= 100
+            self.alpha = 1.0
+        })
     }
     
     @IBAction func doneBtnAction(sender: UIButton) {
-        removeFromSuperview()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.contentView.frame.origin.y += 100
+            self.alpha = 0.0
+        }) { _ in
+            self.removeFromSuperview()
+        }
     }
 }

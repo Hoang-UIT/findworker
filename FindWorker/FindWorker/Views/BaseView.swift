@@ -31,11 +31,20 @@ class BaseView: UIView {
         
     }
     
+    func showInView(_ subView: UIView) {
+        subView.addSubview(self)
+        self.frame = subView.frame
+    }
+    
     func showViewInWindow() {
         guard let window =  UIApplication.shared.windows.first else {
             return
         }
         self.frame = window.frame
         window.addSubview(self)
+    }
+    
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
     }
 }

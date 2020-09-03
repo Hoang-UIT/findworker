@@ -12,56 +12,45 @@ protocol FilterWorkerViewDelegate: class {
     func dismissilterWorkerView( _ view: FilterWorkerView, dismissView: Bool)
 }
 
-class FilterWorkerView: UIView {
+class FilterWorkerView: BaseView {
     @IBOutlet weak var experienceSegment: UISegmentedControl!
     @IBOutlet weak var ratingSegment: UISegmentedControl!
     
-    let nibName = "FilterWorkerView"
+    @IBOutlet weak var contentView: UIView!
     
     weak var delegate: FilterWorkerViewDelegate?
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    func commonInit() {
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-        
-        experienceSegment.setSegmentStyle()
+
+    override func config() {
+    experienceSegment.setSegmentStyle()
         experienceSegment.selectedSegmentIndex = experienceSegment.numberOfSegments - 1
         
         ratingSegment.setSegmentStyle()
         ratingSegment.selectedSegmentIndex = ratingSegment.numberOfSegments - 1
     }
     
-    func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-            return nil
-        }
-        return view
-    }
-    
-    func showViewInWindow() {
-        guard let window =  UIApplication.shared.windows.first else {
-            return
-        }
-        self.frame = window.frame
-        window.addSubview(self)
+    override func showInView(_ subView: UIView) {
+        super.showInView(subView)
+        contentView.frame.origin.y -= 100
+        self.alpha = 0.0
+        UIView.animate(withDuration: 0.5, animations: {
+            self.contentView.frame.origin.y += 100
+            self.alpha = 1.0
+        })
     }
     
     @IBAction func backBtnAction(_ sender: UIButton) {
         if delegate != nil {
             delegate?.dismissilterWorkerView(self, dismissView: true)
         }
-        removeFromSuperview()
+    }
+    
+    override func removeFromSuperview() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.contentView.frame.origin.y -= 100
+            self.alpha = 0.0
+        }) {_ in
+            self.contentView.frame.origin.y += 100
+            super.removeFromSuperview()
+        }
     }
 }

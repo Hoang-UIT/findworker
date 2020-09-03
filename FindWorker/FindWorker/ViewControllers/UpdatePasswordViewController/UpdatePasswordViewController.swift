@@ -63,7 +63,13 @@ class UpdatePasswordViewController: BaseViewController {
         if password.elementsEqual(verifyPassword) {
             let alert = UIAlertController(title: "Thông báo", message: "Cập nhật mật khẩu thành công.", preferredStyle: .alert)
             let doneAlertAction = UIAlertAction(title: "Done", style: .default) { (action) in
-                AppDelegate.dismissToRootViewController()
+                AppDelegate.dismissToRootViewController({ (rootViewController) in
+                    if self.type == .Register {
+                        let viewController = HomeViewController.loadFromNib()
+                        let navi = UINavigationController(rootViewController: viewController)
+                        rootViewController?.present(navi, animated: true, completion: nil)
+                    }
+                })
             }
             alert.addAction(doneAlertAction)
             present(alert, animated: true, completion: nil)

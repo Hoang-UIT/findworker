@@ -8,43 +8,74 @@
 
 import UIKit
 
-class FilterOrderView: UIView {
+protocol FilterOrderViewDelegate: class {
+    func filterOrderView(_ view: FilterOrderView, _ statusSelected: StatusOrder)
+}
+class FilterOrderView: BaseView {
 
-    let nibName = "FilterOrderView"
-        
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
+    @IBOutlet weak var contentView: UIStackView!
+
+    @IBOutlet weak var button_1: UIButton!
+    @IBOutlet weak var button_2: UIButton!
+    @IBOutlet weak var button_3: UIButton!
+    @IBOutlet weak var button_4: UIButton!
+    @IBOutlet weak var button_5: UIButton!
+    @IBOutlet weak var button_6: UIButton!
+    @IBOutlet weak var button_7: UIButton!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
+    weak var delegate: FilterOrderViewDelegate?
     
-    func commonInit() {
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-    }
-    
-    func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-            return nil
+    var statusOrder: StatusOrder = .status_7 {
+        didSet {
+            for statusBtn in listStatusBtn {
+                if let text = statusBtn.titleLabel?.text, text.elementsEqual(statusOrder.localized) {
+                    statusBtn.backgroundColor = Constants.ColorApp.mainColor
+                    statusBtn.isSelected = true
+                }
+            }
         }
-        return view
     }
     
-    func showViewInWindow() {
-        guard let window =  UIApplication.shared.windows.first else {
-            return
+    var listStatusBtn = [UIButton]()
+    
+    override func config() {
+        listStatusBtn.append(button_1)
+        listStatusBtn.append(button_2)
+        listStatusBtn.append(button_3)
+        listStatusBtn.append(button_4)
+        listStatusBtn.append(button_5)
+        listStatusBtn.append(button_6)
+        listStatusBtn.append(button_7)
+    }
+    
+    override func showViewInWindow() {
+        super.showViewInWindow()
+        contentView.frame.origin.y += 100
+        self.alpha = 0.0
+        UIView.animate(withDuration: 0.5, animations: {
+            self.contentView.frame.origin.y -= 100
+            self.alpha = 1.0
+
+        }) { _ in
+            
         }
-        self.frame = window.frame
-        window.addSubview(self)
+    }
+    
+    @IBAction func statusBtnAction(sender: UIButton) {
+        if let text = sender.titleLabel?.text, let status = StatusOrder(rawValue: text) {
+            if delegate != nil {
+                delegate?.filterOrderView(self, status)
+            }
+        }
     }
     
     @IBAction func doneBtnAction(sender: UIButton) {
-        removeFromSuperview()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.contentView.frame.origin.y += 100
+            self.alpha = 0.0
+
+        }) { _ in
+            self.removeFromSuperview()
+        }
     }
 }

@@ -42,10 +42,9 @@ class ListWorkerViewController: BaseViewController {
         title = "Bộ Lọc"
         if filterWorkerView == nil {
             filterWorkerView = FilterWorkerView()
+            filterWorkerView?.delegate = self
         }
-        filterWorkerView?.delegate = self
-        filterWorkerView?.frame = view.frame
-        view.addSubview(filterWorkerView ?? UIView())
+        filterWorkerView?.showInView(self.view)
         navigationItem.setHidesBackButton(true, animated: true)
         navigationItem.rightBarButtonItem =  UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(reloadData))
     }

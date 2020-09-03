@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50EB8C32500959F007E06C4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50EB8C22500959F007E06C4 /* MapKit.framework */; };
 		C51BADCD24FE6B2300F91D75 /* WorkerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BADCB24FE6B2300F91D75 /* WorkerTableViewCell.swift */; };
 		C51BADCE24FE6B2300F91D75 /* WorkerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51BADCC24FE6B2300F91D75 /* WorkerTableViewCell.xib */; };
 		C51BADD324FE6F7000F91D75 /* WorkerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51BADD124FE6F7000F91D75 /* WorkerDetailViewController.xib */; };
@@ -85,6 +86,7 @@
 /* Begin PBXFileReference section */
 		46E33E13FA0540ACFFB8B8F2 /* Pods_FindWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5105A8C67C9E554539BFE608 /* Pods-FindWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWorker.debug.xcconfig"; path = "Target Support Files/Pods-FindWorker/Pods-FindWorker.debug.xcconfig"; sourceTree = "<group>"; };
+		C50EB8C22500959F007E06C4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C51BADCB24FE6B2300F91D75 /* WorkerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerTableViewCell.swift; sourceTree = "<group>"; };
 		C51BADCC24FE6B2300F91D75 /* WorkerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerTableViewCell.xib; sourceTree = "<group>"; };
 		C51BADD124FE6F7000F91D75 /* WorkerDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerDetailViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C8310124F4EC70000E542A /* WebKit.framework in Frameworks */,
+				C50EB8C32500959F007E06C4 /* MapKit.framework in Frameworks */,
 				F572C9F79BF03D2A0188518F /* Pods_FindWorker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +181,7 @@
 		56BCE003EE6D6C5FD0887EF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C50EB8C22500959F007E06C4 /* MapKit.framework */,
 				C5C8310024F4EC70000E542A /* WebKit.framework */,
 				46E33E13FA0540ACFFB8B8F2 /* Pods_FindWorker.framework */,
 			);
@@ -340,8 +344,8 @@
 		C56182C224FE44B200E5B205 /* RegisterViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C56182C324FE44B900E5B205 /* RegisterViewController.xib */,
 				C5FACEC124EF74950023A282 /* RegisterViewController.swift */,
+				C56182C324FE44B900E5B205 /* RegisterViewController.xib */,
 			);
 			path = RegisterViewController;
 			sourceTree = "<group>";

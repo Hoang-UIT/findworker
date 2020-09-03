@@ -22,12 +22,27 @@ class MainMenuView: BaseView {
     
     weak var delegate: MainMenuViewDelegate?
     
+    @IBOutlet weak var buttonBackground: UIButton!
     @IBOutlet weak var contentView: UIView!
 
+    override func showViewInWindow() {
+        super.showViewInWindow()
+        
+        contentView.frame.origin.x = -100
+        self.alpha = 0.0
+        UIView.animate(withDuration: 1.0, animations: {
+            self.contentView.frame.origin.x = 100
+            self.alpha = 1.0
+        }) { _ in
+            
+        }
+    }
+    
     @IBAction func infoUserBtnAction(_ sender: UIButton) {
         if delegate != nil {
             delegate?.mainMenuView(self, type: .UserInfo)
         }
+        
     }
     
     @IBAction func infoOrderBtnAction(_ sender: UIButton) {
@@ -35,13 +50,7 @@ class MainMenuView: BaseView {
             delegate?.mainMenuView(self, type: .OrderInfo)
         }
     }
-    
-    @IBAction func settingBtnAction(_ sender: UIButton) {
-        if delegate != nil {
-            delegate?.mainMenuView(self, type: .Setting)
-        }
-    }
-    
+
     @IBAction func logoutBtnAction(_ sender: UIButton) {
         if delegate != nil {
             delegate?.mainMenuView(self, logout: true)
@@ -51,6 +60,11 @@ class MainMenuView: BaseView {
 
 private extension MainMenuView {
     @IBAction func dismissMainMenuBtnAction(_ sender: UIButton) {
-        self.removeFromSuperview()
+        UIView.animate(withDuration: 1.0, animations: {
+            self.contentView.frame.origin.x = -100
+            self.alpha = 0.0
+        }) { _ in
+            self.removeFromSuperview()
+        }
     }
 }
