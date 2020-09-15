@@ -27,12 +27,7 @@ class FilterOrderView: BaseView {
     
     var statusOrder: StatusOrder = .status_7 {
         didSet {
-            for statusBtn in listStatusBtn {
-                if let text = statusBtn.titleLabel?.text, text.elementsEqual(statusOrder.localized) {
-                    statusBtn.backgroundColor = Constants.ColorApp.mainColor
-                    statusBtn.isSelected = true
-                }
-            }
+            updateUI()
         }
     }
     
@@ -52,7 +47,7 @@ class FilterOrderView: BaseView {
         super.showViewInWindow()
         contentView.frame.origin.y += 100
         self.alpha = 0.0
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: Constants.TimeAnimate, animations: {
             self.contentView.frame.origin.y -= 100
             self.alpha = 1.0
 
@@ -61,7 +56,22 @@ class FilterOrderView: BaseView {
         }
     }
     
+    func updateUI() {
+        for statusBtn in listStatusBtn {
+            if let text = statusBtn.titleLabel?.text, text.elementsEqual(statusOrder.localized) {
+                statusBtn.backgroundColor = Constants.ColorApp.mainColor
+                statusBtn.isSelected = true
+            }
+        }
+    }
+    
     @IBAction func statusBtnAction(sender: UIButton) {
+        for statusBtn in listStatusBtn {
+            statusBtn.isSelected = false
+            statusBtn.backgroundColor = .white
+        }
+        sender.isSelected = true
+        sender.backgroundColor = Constants.ColorApp.mainColor
         if let text = sender.titleLabel?.text, let status = StatusOrder(rawValue: text) {
             if delegate != nil {
                 delegate?.filterOrderView(self, status)
@@ -70,7 +80,7 @@ class FilterOrderView: BaseView {
     }
     
     @IBAction func doneBtnAction(sender: UIButton) {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: Constants.TimeAnimate, animations: {
             self.contentView.frame.origin.y += 100
             self.alpha = 0.0
 

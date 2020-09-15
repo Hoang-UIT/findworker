@@ -30,7 +30,7 @@ class MainMenuView: BaseView {
         
         contentView.frame.origin.x = -100
         self.alpha = 0.0
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: Constants.TimeAnimate, animations: {
             self.contentView.frame.origin.x = 100
             self.alpha = 1.0
         }) { _ in
@@ -50,17 +50,25 @@ class MainMenuView: BaseView {
             delegate?.mainMenuView(self, type: .OrderInfo)
         }
     }
-
+    
+    @IBAction func settingBtnAction(_ sender: UIButton) {
+        if delegate != nil {
+            delegate?.mainMenuView(self, type: .Setting)
+        }
+    }
+    
     @IBAction func logoutBtnAction(_ sender: UIButton) {
         if delegate != nil {
             delegate?.mainMenuView(self, logout: true)
         }
     }
+    
+    
 }
 
 private extension MainMenuView {
     @IBAction func dismissMainMenuBtnAction(_ sender: UIButton) {
-        UIView.animate(withDuration: 1.0, animations: {
+        UIView.animate(withDuration: Constants.TimeAnimate, animations: {
             self.contentView.frame.origin.x = -100
             self.alpha = 0.0
         }) { _ in

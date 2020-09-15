@@ -32,6 +32,9 @@ class ServiceDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bottomView.isHidden = isHiddenBottomView
+        if let serviceDetail = serviceDetail {
+            addButton.backgroundColor = serviceDetail.isSelected ? UIColor.red : Constants.ColorApp.mainColor
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,14 +54,13 @@ class ServiceDetailViewController: BaseViewController {
         }
     }
     
-    
-    
     @IBAction func backBtnAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func addBtnAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        sender.backgroundColor = sender.isSelected ? UIColor.red : Constants.ColorApp.mainColor
         serviceDetail?.isSelected = sender.isSelected
         if delegate != nil {
             delegate?.serviceDetailViewController(self, serviceDetail: serviceDetail)

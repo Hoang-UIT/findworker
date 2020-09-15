@@ -14,12 +14,18 @@ protocol ServiceTableViewCellDelegate: class {
 
 class ServiceTableViewCell: UITableViewCell {
 
+    enum ServiceTableViewCellType {
+        case ListWorkViewController
+        case HomeViewController
+    }
+    
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var nameServiceLabel: UILabel!
     @IBOutlet weak var checkboxButton: UIButton!
+    @IBOutlet weak var leftConstraintContentView: NSLayoutConstraint!
     
     weak var delegate: ServiceTableViewCellDelegate?
-    
+        
     var serviceDetail: ServiceDetailModel?
     
     override func awakeFromNib() {
@@ -27,11 +33,19 @@ class ServiceTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func loadData(_ service: ServiceDetailModel) {
+    func loadData(_ service: ServiceDetailModel, _ type: ServiceTableViewCellType? = nil, _ isEditing: Bool? = false) {
+        if let type = type, type == .ListWorkViewController {
+            leftConstraintContentView.constant = 10.0
+            if let isEditing = isEditing {
+                checkboxButton.isHidden = !isEditing
+            }
+        }
+
         self.serviceDetail = service
         nameServiceLabel.text = service.name
         checkboxButton.isSelected = service.isSelected
     }
+    
     @IBAction func selectBtnAction(_ sender: UIButton) {
         if let serviceDetail = serviceDetail {
             serviceDetail.isSelected = !serviceDetail.isSelected

@@ -10,4 +10,7 @@ target 'FindWorker' do
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftyStarRatingView'
   pod 'DateTimePicker'
+  
+  pod 'RealmSwift'
 end
+ 

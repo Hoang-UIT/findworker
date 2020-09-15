@@ -11,23 +11,24 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmOrderViewController" customModule="FindWorker" customModuleProvider="target">
             <connections>
                 <outlet property="bottomContentView" destination="Vg0-eh-KFW" id="X4v-Oe-2l8"/>
+                <outlet property="paymentLabel" destination="Fsp-zR-dQt" id="cHX-w8-JjC"/>
                 <outlet property="tableView" destination="Tze-Cg-Xem" id="e1F-yc-CVS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="1176"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1042"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqY-My-Dcs">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="1126"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="992"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="560-DG-l1M">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="1066.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="994.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-Yp-QUX">
-                                    <rect key="frame" x="10" y="10" width="355" height="1046.5"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="TZG-Yp-QUX">
+                                    <rect key="frame" x="10" y="10" width="355" height="974.5"/>
                                     <subviews>
                                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bO5-Gi-qGv">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="200"/>
@@ -41,7 +42,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </mapView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-DM-mgG">
-                                            <rect key="frame" x="0.0" y="210" width="355" height="50"/>
+                                            <rect key="frame" x="0.0" y="201" width="355" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách Hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfs-ai-7kK">
                                                     <rect key="frame" x="10" y="15.5" width="78" height="19.5"/>
@@ -71,7 +72,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ep6-86-qwh">
-                                            <rect key="frame" x="0.0" y="270" width="355" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="252" width="355" height="93.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Địa chỉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bt-yL-7g0">
                                                     <rect key="frame" x="10" y="10" width="44" height="19.5"/>
@@ -102,7 +103,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSM-HY-st7">
-                                            <rect key="frame" x="0.0" y="373.5" width="355" height="300"/>
+                                            <rect key="frame" x="0.0" y="346.5" width="355" height="300"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nội dung công việc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-yv-hWW">
                                                     <rect key="frame" x="10" y="10" width="125.5" height="19.5"/>
@@ -137,7 +138,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvM-5M-mg2">
-                                            <rect key="frame" x="0.0" y="683.5" width="355" height="70"/>
+                                            <rect key="frame" x="0.0" y="647.5" width="355" height="70"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày Bắt Đầu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjO-UE-uLi">
                                                     <rect key="frame" x="10" y="10" width="88" height="19.5"/>
@@ -185,7 +186,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwI-ql-SBQ">
-                                            <rect key="frame" x="0.0" y="763.5" width="355" height="50"/>
+                                            <rect key="frame" x="0.0" y="718.5" width="355" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhân Viên Kỹ Thuật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF2-xZ-JWN">
                                                     <rect key="frame" x="10" y="10" width="124.5" height="30"/>
@@ -217,7 +218,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMd-ot-leI">
-                                            <rect key="frame" x="0.0" y="823.5" width="355" height="50"/>
+                                            <rect key="frame" x="0.0" y="769.5" width="355" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng Chi Phí" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBK-ku-PjO">
                                                     <rect key="frame" x="10" y="10" width="82.5" height="30"/>
@@ -248,7 +249,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efg-tY-17S">
-                                            <rect key="frame" x="0.0" y="883.5" width="355" height="80"/>
+                                            <rect key="frame" x="0.0" y="820.5" width="355" height="80"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qek-7v-ZGS">
                                                     <rect key="frame" x="10" y="10" width="237" height="25"/>
@@ -318,7 +319,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YU-Bz-3oO">
-                                            <rect key="frame" x="0.0" y="973.5" width="355" height="73"/>
+                                            <rect key="frame" x="0.0" y="901.5" width="355" height="73"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ghi Chú" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENP-Zu-Fnu">
                                                     <rect key="frame" x="10" y="10" width="52.5" height="19.5"/>
@@ -373,7 +374,7 @@
                     </constraints>
                 </scrollView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Vg0-eh-KFW">
-                    <rect key="frame" x="0.0" y="1126" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="992" width="375" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7h8-pk-fDW">
                             <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
@@ -422,7 +423,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="72.799999999999997" y="278.86056971514245"/>
+            <point key="canvasLocation" x="72.799999999999997" y="218.59070464767618"/>
         </view>
     </objects>
     <resources>

@@ -11,39 +11,13 @@ import UIKit
 protocol ServiceSectionViewDelegate: class {
     func serviceSectionView(_ view: ServiceSectionView, service: ServiceModel)
 }
-class ServiceSectionView: UIView {
+class ServiceSectionView: BaseView {
     
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var nameServiceLabel: UILabel!
-    
-    let nibName = "ServiceSectionView"
-    
+        
     weak var delegate: ServiceSectionViewDelegate?
     var service: ServiceModel?
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    func commonInit() {
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        self.addSubview(view)
-    }
-    
-    func loadViewFromNib() -> UIView? {
-        let nib = UINib(nibName: nibName, bundle: nil)
-        guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
-            return nil
-        }
-        return view
-    }
     
     func loadData(_ service: ServiceModel) {
         self.service = service

@@ -17,7 +17,7 @@ class OrderItemTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func updateData() {
-        
+    func updateData(status: StatusOrder) {
+        statusLabel.text = status.localized
     }
 }

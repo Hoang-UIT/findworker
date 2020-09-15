@@ -1,24 +1,34 @@
 PODS:
   - DateTimePicker (2.4.1)
   - IQKeyboardManagerSwift (6.5.6)
+  - Realm (5.4.0):
+    - Realm/Headers (= 5.4.0)
+  - Realm/Headers (5.4.0)
+  - RealmSwift (5.4.0):
+    - Realm (= 5.4.0)
   - SwiftyStarRatingView (1.0.4)
 
 DEPENDENCIES:
   - DateTimePicker
   - IQKeyboardManagerSwift
+  - RealmSwift
   - SwiftyStarRatingView
 
 SPEC REPOS:
   trunk:
     - DateTimePicker
     - IQKeyboardManagerSwift
+    - Realm
+    - RealmSwift
     - SwiftyStarRatingView
 
 SPEC CHECKSUMS:
   DateTimePicker: 997176ea28954f3c18817b9565a53b28ee4400b8
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Realm: 8949757d76e2451a53d727954c607e49c2542b77
+  RealmSwift: 0b7d7121e842724188123c6086831ae6d2952050
   SwiftyStarRatingView: a2b0057700e0adeb8e7442c55d99cb53b531d2f4
 
-PODFILE CHECKSUM: f1980fde87e81bdc3b9e43b0c37c8552a0ebfb8f
+PODFILE CHECKSUM: d695ad7cba2085203f885aadbed7d483dcd9e4b4
 
 COCOAPODS: 1.8.4

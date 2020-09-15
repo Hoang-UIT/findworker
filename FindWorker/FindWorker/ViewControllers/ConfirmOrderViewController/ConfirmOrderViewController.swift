@@ -10,9 +10,11 @@ import UIKit
 
 class ConfirmOrderViewController: BaseViewController {
     
+    @IBOutlet weak var paymentLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bottomContentView: UIStackView!
     
+    var paymentType = PaymentType.Cashing
     var isHiddenBottomContentView = false
     
     override func viewDidLoad() {
@@ -43,6 +45,8 @@ class ConfirmOrderViewController: BaseViewController {
     
     @IBAction func payBtnAction(_ sender: UIButton) {
         let paymenMethodView = PaymenMethodView()
+        paymenMethodView.delegate = self
+        paymenMethodView.paymentType = paymentType
         paymenMethodView.showViewInWindow()
     }
 }
@@ -63,11 +67,17 @@ extension ConfirmOrderViewController: UITableViewDataSource {
 extension ConfirmOrderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
         if let viewController = ServiceDetailViewController.instantiateViewController(Constants.StoryboardID.serviceDetailScreen) as? ServiceDetailViewController {
             viewController.isHiddenBottomView = true
             
             navigationController?.pushViewController(viewController, animated: true)
         }
+    }
+}
+
+extension ConfirmOrderViewController: PaymenMethodViewDelegate {
+    func paymenMethodView(_ view: PaymenMethodView, _ typeSelected: PaymentType) {
+        paymentType = typeSelected
+        paymentLabel.text = typeSelected.localized
     }
 }

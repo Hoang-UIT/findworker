@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C50EB8C32500959F007E06C4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50EB8C22500959F007E06C4 /* MapKit.framework */; };
+		C50EB8C72501DD5F007E06C4 /* ListWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50EB8C52501DD5F007E06C4 /* ListWorkViewController.swift */; };
+		C50EB8C82501DD5F007E06C4 /* ListWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50EB8C62501DD5F007E06C4 /* ListWorkViewController.xib */; };
+		C50EB8CC250220A5007E06C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50EB8CA250220A5007E06C4 /* SettingViewController.swift */; };
+		C50EB8CD250220A5007E06C4 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50EB8CB250220A5007E06C4 /* SettingViewController.xib */; };
+		C50EB8D1250225D3007E06C4 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50EB8CF250225D3007E06C4 /* PermissionViewController.swift */; };
+		C50EB8D2250225D3007E06C4 /* PermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50EB8D0250225D3007E06C4 /* PermissionViewController.xib */; };
 		C51BADCD24FE6B2300F91D75 /* WorkerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BADCB24FE6B2300F91D75 /* WorkerTableViewCell.swift */; };
 		C51BADCE24FE6B2300F91D75 /* WorkerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51BADCC24FE6B2300F91D75 /* WorkerTableViewCell.xib */; };
 		C51BADD324FE6F7000F91D75 /* WorkerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51BADD124FE6F7000F91D75 /* WorkerDetailViewController.xib */; };
@@ -15,10 +21,13 @@
 		C51BADD724FE6FC200F91D75 /* WorkerInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51BADD524FE6FC200F91D75 /* WorkerInfoTableViewCell.xib */; };
 		C51BADDA24FE6FF500F91D75 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51BADD824FE6FF500F91D75 /* CommentTableViewCell.swift */; };
 		C51BADDB24FE6FF500F91D75 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51BADD924FE6FF500F91D75 /* CommentTableViewCell.xib */; };
+		C525C4C32508C99F00563AE1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C525C4C22508C99F00563AE1 /* Date+Extension.swift */; };
 		C52CE3D524EE1F1A00A3C7F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */; };
 		C52CE3DC24EE1F1A00A3C7F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */; };
 		C52CE3DE24EE1F1E00A3C7F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */; };
 		C52CE3E124EE1F1E00A3C7F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52CE3DF24EE1F1E00A3C7F9 /* LaunchScreen.storyboard */; };
+		C5325239250885AD00698B64 /* DateTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5325238250885AD00698B64 /* DateTimePickerView.swift */; };
+		C532523B250885B700698B64 /* DateTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C532523A250885B700698B64 /* DateTimePickerView.xib */; };
 		C536F9FB24F89ADA0075CCBE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536F9FA24F89ADA0075CCBE /* UIViewController+Extension.swift */; };
 		C536FA0324F8A5770075CCBE /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C536FA0124F8A5770075CCBE /* ConfirmOrderViewController.swift */; };
 		C536FA0424F8A5770075CCBE /* ConfirmOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C536FA0224F8A5770075CCBE /* ConfirmOrderViewController.xib */; };
@@ -41,6 +50,10 @@
 		C53D24F024FE4FD0004739B4 /* WorkInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C53D24EF24FE4FD0004739B4 /* WorkInfoViewController.xib */; };
 		C53D24F324FE51B7004739B4 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53D24F124FE51B7004739B4 /* AddressTableViewCell.swift */; };
 		C53D24F424FE51B7004739B4 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C53D24F224FE51B7004739B4 /* AddressTableViewCell.xib */; };
+		C5434C00250A1B3F00716EC6 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5434BFF250A1B3F00716EC6 /* OrderModel.swift */; };
+		C5434C03250B756800716EC6 /* SearchLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5434C02250B756800716EC6 /* SearchLocationView.swift */; };
+		C5434C05250B757300716EC6 /* SearchLocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5434C04250B757300716EC6 /* SearchLocationView.xib */; };
+		C549C801250F596000D01CDC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C549C800250F596000D01CDC /* Helper.swift */; };
 		C56182BC24FE030200E5B205 /* UpdatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56182BB24FE030200E5B205 /* UpdatePasswordViewController.swift */; };
 		C56182C124FE2EF200E5B205 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56182C024FE2EF200E5B205 /* LoginViewController.xib */; };
 		C56182C424FE44B900E5B205 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C56182C324FE44B900E5B205 /* RegisterViewController.xib */; };
@@ -87,6 +100,12 @@
 		46E33E13FA0540ACFFB8B8F2 /* Pods_FindWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5105A8C67C9E554539BFE608 /* Pods-FindWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWorker.debug.xcconfig"; path = "Target Support Files/Pods-FindWorker/Pods-FindWorker.debug.xcconfig"; sourceTree = "<group>"; };
 		C50EB8C22500959F007E06C4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C50EB8C52501DD5F007E06C4 /* ListWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWorkViewController.swift; sourceTree = "<group>"; };
+		C50EB8C62501DD5F007E06C4 /* ListWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListWorkViewController.xib; sourceTree = "<group>"; };
+		C50EB8CA250220A5007E06C4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C50EB8CB250220A5007E06C4 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		C50EB8CF250225D3007E06C4 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		C50EB8D0250225D3007E06C4 /* PermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PermissionViewController.xib; sourceTree = "<group>"; };
 		C51BADCB24FE6B2300F91D75 /* WorkerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerTableViewCell.swift; sourceTree = "<group>"; };
 		C51BADCC24FE6B2300F91D75 /* WorkerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerTableViewCell.xib; sourceTree = "<group>"; };
 		C51BADD124FE6F7000F91D75 /* WorkerDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerDetailViewController.xib; sourceTree = "<group>"; };
@@ -94,12 +113,15 @@
 		C51BADD524FE6FC200F91D75 /* WorkerInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerInfoTableViewCell.xib; sourceTree = "<group>"; };
 		C51BADD824FE6FF500F91D75 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		C51BADD924FE6FF500F91D75 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		C525C4C22508C99F00563AE1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		C52CE3D124EE1F1A00A3C7F9 /* FindWorker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWorker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52CE3DB24EE1F1A00A3C7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52CE3E024EE1F1E00A3C7F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52CE3E224EE1F1E00A3C7F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5325238250885AD00698B64 /* DateTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePickerView.swift; sourceTree = "<group>"; };
+		C532523A250885B700698B64 /* DateTimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTimePickerView.xib; sourceTree = "<group>"; };
 		C536F9FA24F89ADA0075CCBE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C536FA0124F8A5770075CCBE /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
 		C536FA0224F8A5770075CCBE /* ConfirmOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmOrderViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +144,10 @@
 		C53D24EF24FE4FD0004739B4 /* WorkInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkInfoViewController.xib; sourceTree = "<group>"; };
 		C53D24F124FE51B7004739B4 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
 		C53D24F224FE51B7004739B4 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		C5434BFF250A1B3F00716EC6 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		C5434C02250B756800716EC6 /* SearchLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationView.swift; sourceTree = "<group>"; };
+		C5434C04250B757300716EC6 /* SearchLocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationView.xib; sourceTree = "<group>"; };
+		C549C800250F596000D01CDC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C56182BB24FE030200E5B205 /* UpdatePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatePasswordViewController.swift; path = FindWorker/ViewControllers/UpdatePasswordViewController/UpdatePasswordViewController.swift; sourceTree = SOURCE_ROOT; };
 		C56182C024FE2EF200E5B205 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C56182C324FE44B900E5B205 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +214,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C50EB8C42501DD4D007E06C4 /* ListWorkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C50EB8C52501DD5F007E06C4 /* ListWorkViewController.swift */,
+				C50EB8C62501DD5F007E06C4 /* ListWorkViewController.xib */,
+			);
+			path = ListWorkViewController;
+			sourceTree = "<group>";
+		};
+		C50EB8C92502209B007E06C4 /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C50EB8CA250220A5007E06C4 /* SettingViewController.swift */,
+				C50EB8CB250220A5007E06C4 /* SettingViewController.xib */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		C50EB8CE250225C9007E06C4 /* PermissionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C50EB8CF250225D3007E06C4 /* PermissionViewController.swift */,
+				C50EB8D0250225D3007E06C4 /* PermissionViewController.xib */,
+			);
+			path = PermissionViewController;
+			sourceTree = "<group>";
+		};
 		C51BADCF24FE6F6100F91D75 /* WorkerDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,19 +275,29 @@
 		C52CE3D324EE1F1A00A3C7F9 /* FindWorker */ = {
 			isa = PBXGroup;
 			children = (
-				C5C830F224F39B54000E542A /* Views */,
-				C5693FD424EFC7C200D37F5A /* Models */,
-				C5693FD124EFB97300D37F5A /* Extensions */,
-				C5F5327724EE5ED200B1BF78 /* ViewControllers */,
-				C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */,
-				C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */,
-				C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */,
-				C52CE3DF24EE1F1E00A3C7F9 /* LaunchScreen.storyboard */,
-				C52CE3E224EE1F1E00A3C7F9 /* Info.plist */,
-				C5F5327E24EE7E0C00B1BF78 /* Constants.swift */,
+				C549C7FF250F593A00D01CDC /* Helper */,
 				C5C830FE24F4EA3B000E542A /* content.html */,
+				C52CE3E224EE1F1E00A3C7F9 /* Info.plist */,
+				C52CE3D424EE1F1A00A3C7F9 /* AppDelegate.swift */,
+				C5F5327E24EE7E0C00B1BF78 /* Constants.swift */,
+				C52CE3DD24EE1F1E00A3C7F9 /* Assets.xcassets */,
+				C5693FD124EFB97300D37F5A /* Extensions */,
+				C52CE3DF24EE1F1E00A3C7F9 /* LaunchScreen.storyboard */,
+				C52CE3DA24EE1F1A00A3C7F9 /* Main.storyboard */,
+				C5693FD424EFC7C200D37F5A /* Models */,
+				C5C830F224F39B54000E542A /* Views */,
+				C5F5327724EE5ED200B1BF78 /* ViewControllers */,
 			);
 			path = FindWorker;
+			sourceTree = "<group>";
+		};
+		C53252372508859B00698B64 /* DateTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C5325238250885AD00698B64 /* DateTimePickerView.swift */,
+				C532523A250885B700698B64 /* DateTimePickerView.xib */,
+			);
+			path = DateTimePickerView;
 			sourceTree = "<group>";
 		};
 		C536F9FC24F89B020075CCBE /* ConfirmOrderViewController */ = {
@@ -332,6 +395,23 @@
 			path = WorkInfoViewController;
 			sourceTree = "<group>";
 		};
+		C5434C01250B755500716EC6 /* SearchLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				C5434C02250B756800716EC6 /* SearchLocationView.swift */,
+				C5434C04250B757300716EC6 /* SearchLocationView.xib */,
+			);
+			path = SearchLocationView;
+			sourceTree = "<group>";
+		};
+		C549C7FF250F593A00D01CDC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C549C800250F596000D01CDC /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C56182BF24FE2EE600E5B205 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +460,7 @@
 				C5C8311B24F79BAC000E542A /* UIStackView+Extension.swift */,
 				C536F9FA24F89ADA0075CCBE /* UIViewController+Extension.swift */,
 				C5E4760224FCD99600062A4D /* NSMutableAttributedString+Extension.swift */,
+				C525C4C22508C99F00563AE1 /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -388,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				C5693FD524EFC7CD00D37F5A /* Service.swift */,
+				C5434BFF250A1B3F00716EC6 /* OrderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -396,12 +478,14 @@
 			isa = PBXGroup;
 			children = (
 				C5E4760424FCD9BA00062A4D /* BaseView.swift */,
-				C5E4760624FCD9DB00062A4D /* MainMenuView */,
-				C5E475FD24FCD77B00062A4D /* TermsAndPolicyView */,
+				C53252372508859B00698B64 /* DateTimePickerView */,
 				C536FA1824F8DDF50075CCBE /* FilterOrderView */,
-				C536FA0E24F8B9200075CCBE /* PaymenMethodView */,
 				C5C8310624F615A8000E542A /* FilterWorkerView */,
+				C5E4760624FCD9DB00062A4D /* MainMenuView */,
+				C536FA0E24F8B9200075CCBE /* PaymenMethodView */,
+				C5434C01250B755500716EC6 /* SearchLocationView */,
 				C5C830F724F3CF21000E542A /* ServiceSectionView */,
+				C5E475FD24FCD77B00062A4D /* TermsAndPolicyView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,22 +529,25 @@
 		C5F5327724EE5ED200B1BF78 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C51BADCF24FE6F6100F91D75 /* WorkerDetailViewController */,
-				C5FA0A7624FE62200052352C /* ListWorkerViewController */,
-				C5FA0A7124FE61450052352C /* MapViewController */,
-				C53D24EE24FE4FC3004739B4 /* WorkInfoViewController */,
-				C53D24EA24FE4897004739B4 /* UpdatePasswordViewController */,
-				C53D24E724FE4810004739B4 /* ServiceDetailViewController */,
-				C56182C824FE464500E5B205 /* HomeViewController */,
-				C56182C524FE45B000E5B205 /* ForgetPasswordViewController */,
-				C56182C224FE44B200E5B205 /* RegisterViewController */,
-				C56182BF24FE2EE600E5B205 /* LoginViewController */,
-				C536FA2224F8E9680075CCBE /* RatingWorkerViewController */,
-				C536FA1324F8DDC40075CCBE /* ListOrderViewController */,
-				C536FA0924F8B4070075CCBE /* UserInfoViewController */,
-				C536F9FC24F89B020075CCBE /* ConfirmOrderViewController */,
 				C5F5327824EE5EF100B1BF78 /* BaseViewController.swift */,
 				C5F5327A24EE727E00B1BF78 /* LaunchScreenViewController.swift */,
+				C536F9FC24F89B020075CCBE /* ConfirmOrderViewController */,
+				C56182C524FE45B000E5B205 /* ForgetPasswordViewController */,
+				C56182C824FE464500E5B205 /* HomeViewController */,
+				C536FA1324F8DDC40075CCBE /* ListOrderViewController */,
+				C5FA0A7624FE62200052352C /* ListWorkerViewController */,
+				C50EB8C42501DD4D007E06C4 /* ListWorkViewController */,
+				C56182BF24FE2EE600E5B205 /* LoginViewController */,
+				C5FA0A7124FE61450052352C /* MapViewController */,
+				C50EB8CE250225C9007E06C4 /* PermissionViewController */,
+				C536FA2224F8E9680075CCBE /* RatingWorkerViewController */,
+				C56182C224FE44B200E5B205 /* RegisterViewController */,
+				C53D24E724FE4810004739B4 /* ServiceDetailViewController */,
+				C50EB8C92502209B007E06C4 /* SettingViewController */,
+				C53D24EA24FE4897004739B4 /* UpdatePasswordViewController */,
+				C536FA0924F8B4070075CCBE /* UserInfoViewController */,
+				C51BADCF24FE6F6100F91D75 /* WorkerDetailViewController */,
+				C53D24EE24FE4FC3004739B4 /* WorkInfoViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -555,14 +642,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E4760124FCD79400062A4D /* TermsAndPolicyView.xib in Resources */,
+				C532523B250885B700698B64 /* DateTimePickerView.xib in Resources */,
 				C5FA0A7524FE61890052352C /* MapViewController.xib in Resources */,
 				C53D24F024FE4FD0004739B4 /* WorkInfoViewController.xib in Resources */,
 				C536FA0824F8A73D0075CCBE /* WorkItemTableViewCell.xib in Resources */,
 				C536FA2124F8E00C0075CCBE /* OrderItemTableViewCell.xib in Resources */,
 				C536FA0424F8A5770075CCBE /* ConfirmOrderViewController.xib in Resources */,
 				C5C830FB24F3CF34000E542A /* ServiceSectionView.xib in Resources */,
+				C50EB8CD250220A5007E06C4 /* SettingViewController.xib in Resources */,
 				C53D24E924FE4819004739B4 /* ServiceDetailViewController.xib in Resources */,
 				C56182CA24FE464C00E5B205 /* HomeViewController.xib in Resources */,
+				C50EB8C82501DD5F007E06C4 /* ListWorkViewController.xib in Resources */,
 				C52CE3E124EE1F1E00A3C7F9 /* LaunchScreen.storyboard in Resources */,
 				C56182CE24FE46F400E5B205 /* ServiceTableViewCell.xib in Resources */,
 				C5C830FF24F4EA3B000E542A /* content.html in Resources */,
@@ -571,6 +661,7 @@
 				C51BADDB24FE6FF500F91D75 /* CommentTableViewCell.xib in Resources */,
 				C52CE3DE24EE1F1E00A3C7F9 /* Assets.xcassets in Resources */,
 				C536FA0D24F8B4160075CCBE /* UserInfoViewController.xib in Resources */,
+				C50EB8D2250225D3007E06C4 /* PermissionViewController.xib in Resources */,
 				C5C830F624F39B80000E542A /* MainMenuView.xib in Resources */,
 				C52CE3DC24EE1F1A00A3C7F9 /* Main.storyboard in Resources */,
 				C536FA1224F8B95E0075CCBE /* PaymenMethodView.xib in Resources */,
@@ -579,6 +670,7 @@
 				C51BADCE24FE6B2300F91D75 /* WorkerTableViewCell.xib in Resources */,
 				C56182C724FE45B700E5B205 /* ForgetPasswordViewController.xib in Resources */,
 				C51BADD324FE6F7000F91D75 /* WorkerDetailViewController.xib in Resources */,
+				C5434C05250B757300716EC6 /* SearchLocationView.xib in Resources */,
 				C56182C424FE44B900E5B205 /* RegisterViewController.xib in Resources */,
 				C51BADD724FE6FC200F91D75 /* WorkerInfoTableViewCell.xib in Resources */,
 				C53D24F424FE51B7004739B4 /* AddressTableViewCell.xib in Resources */,
@@ -642,9 +734,11 @@
 				C56182BC24FE030200E5B205 /* UpdatePasswordViewController.swift in Sources */,
 				C5C8311C24F79BAC000E542A /* UIStackView+Extension.swift in Sources */,
 				C5693FD324EFB98800D37F5A /* UIColor+Extension.swift in Sources */,
+				C50EB8CC250220A5007E06C4 /* SettingViewController.swift in Sources */,
 				C5E4760524FCD9BA00062A4D /* BaseView.swift in Sources */,
 				C5C8311424F75600000E542A /* WorkInfoViewController.swift in Sources */,
 				C51BADCD24FE6B2300F91D75 /* WorkerTableViewCell.swift in Sources */,
+				C5325239250885AD00698B64 /* DateTimePickerView.swift in Sources */,
 				C5FACEC224EF74950023A282 /* RegisterViewController.swift in Sources */,
 				C51BADD624FE6FC200F91D75 /* WorkerInfoTableViewCell.swift in Sources */,
 				C5C8311824F76A65000E542A /* UIview+Extension.swift in Sources */,
@@ -658,17 +752,23 @@
 				C536FA0324F8A5770075CCBE /* ConfirmOrderViewController.swift in Sources */,
 				C536FA2524F8E97D0075CCBE /* RatingWorkerViewController.swift in Sources */,
 				C5693FD024EFB6FA00D37F5A /* HomeViewController.swift in Sources */,
+				C549C801250F596000D01CDC /* Helper.swift in Sources */,
+				C5434C03250B756800716EC6 /* SearchLocationView.swift in Sources */,
 				C5C8311224F65F16000E542A /* WorkerDetailViewController.swift in Sources */,
 				C536F9FB24F89ADA0075CCBE /* UIViewController+Extension.swift in Sources */,
 				C536FA0724F8A73D0075CCBE /* WorkItemTableViewCell.swift in Sources */,
 				C51BADDA24FE6FF500F91D75 /* CommentTableViewCell.swift in Sources */,
 				C52CE3D524EE1F1A00A3C7F9 /* AppDelegate.swift in Sources */,
+				C50EB8C72501DD5F007E06C4 /* ListWorkViewController.swift in Sources */,
 				C5C830F424F39B70000E542A /* MainMenuView.swift in Sources */,
 				C5693FDA24EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift in Sources */,
 				C5F5327F24EE7E0C00B1BF78 /* Constants.swift in Sources */,
 				C5693FCC24EF7E8200D37F5A /* ForgetPasswordViewController.swift in Sources */,
 				C5E4760324FCD99600062A4D /* NSMutableAttributedString+Extension.swift in Sources */,
+				C5434C00250A1B3F00716EC6 /* OrderModel.swift in Sources */,
 				C5693FD824EFC93E00D37F5A /* ServiceTableViewCell.swift in Sources */,
+				C525C4C32508C99F00563AE1 /* Date+Extension.swift in Sources */,
+				C50EB8D1250225D3007E06C4 /* PermissionViewController.swift in Sources */,
 				C5C8311A24F790A1000E542A /* MapViewController.swift in Sources */,
 				C536FA2024F8E00C0075CCBE /* OrderItemTableViewCell.swift in Sources */,
 				C5C8310C24F61AAC000E542A /* UISegmentedControl+Extension.swift in Sources */,

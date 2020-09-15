@@ -44,6 +44,7 @@ extension ListOrderViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "OrderItemTableViewCell") as? OrderItemTableViewCell {
+            cell.updateData(status: statusOrder)
             return cell
         }
         
@@ -63,5 +64,6 @@ extension ListOrderViewController: FilterOrderViewDelegate {
         statusOrder = statusSelected
         titleViewController = statusSelected.localized
         title = statusSelected.localized
+        tableView.reloadData()
     }
 }

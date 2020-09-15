@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ServiceModel {
+class ServiceModel: NSObject {
     var id: Int?
     var name: String?
     var icon: String?
@@ -28,7 +28,7 @@ class ServiceModel {
     }
 }
 
-class ServiceDetailModel {
+class ServiceDetailModel: NSObject {
     var id: Int?
     var serviceId: Int?
     var name: String?

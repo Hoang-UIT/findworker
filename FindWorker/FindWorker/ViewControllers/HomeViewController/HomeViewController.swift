@@ -30,11 +30,13 @@ class HomeViewController: BaseViewController {
         ServiceModel(10,"Dịch Vụ Sửa Nước", "tho_sua_nuoc_img"),
     ]
     
+    var order = OrderModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         titleViewController = "Trang Chủ"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(showMainMenu))
-        rightBarButton = UIBarButtonItem(image: UIImage(named: "order_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
+        rightBarButton = UIBarButtonItem(image: UIImage(named: "order_img.png")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(goToListWorkViewController))
         navigationItem.rightBarButtonItem = rightBarButton
         
         tableView.register(UINib(nibName: "ServiceTableViewCell", bundle: nil), forCellReuseIdentifier: "ServiceTableViewCell")
@@ -57,7 +59,21 @@ class HomeViewController: BaseViewController {
         menuView.showViewInWindow()
     }
     
+    @objc func goToListWorkViewController() {
+        if order.services.count > 0 {
+            let viewController = ListWorkViewController.loadFromNib()
+            viewController.delegate = self
+            viewController.order = order
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            let alert = UIAlertController(title: nil, message: "Chưa có bất kỳ công việc nào được chọn.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func updateBadgeOfShopCart(_ serviceDetail: ServiceDetailModel?) {
+        order.services.removeAll()
         var serviceSelected = 0
         for service in services {
             service.listServiceDetail = service.listServiceDetail.map { (item) -> ServiceDetailModel in
@@ -67,6 +83,7 @@ class HomeViewController: BaseViewController {
                 return item
             }
             let filter = service.listServiceDetail.filter{$0.isSelected}
+            order.services.append(contentsOf: filter)
             serviceSelected += filter.count
         }
         rightBarButton?.setBadge(text: "\(serviceSelected)")
@@ -112,7 +129,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80.0
+        return 60.0
     }
 }
 
@@ -152,11 +169,24 @@ extension HomeViewController: MainMenuViewDelegate {
             navigationController?.pushViewController(viewController, animated: true)
             break
         case .Setting:
+            let viewController = SettingViewController.loadFromNib()
+            navigationController?.pushViewController(viewController, animated: true)
             break
         }
         
         view.removeFromSuperview()
         print(type)
+    }
+}
+
+extension HomeViewController: ListWorkViewControllerDelegate {
+    func listWorkViewController(_ viewController: ListWorkViewController, _ data: OrderModel) {
+        for serviceDetail in data.services {
+            let filter = services.filter{$0.id == serviceDetail.serviceId}
+            filter.filter{$0.id == serviceDetail.id}.first?.isSelected = serviceDetail.isSelected
+        }
+        tableView.reloadData()
+        updateBadgeOfShopCart(nil)
     }
 }
 

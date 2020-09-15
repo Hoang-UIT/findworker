@@ -19,9 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cDm-Ni-W0l">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
-                </mapView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SSf-cf-eiD">
                     <rect key="frame" x="0.0" y="686" width="414" height="50"/>
                     <subviews>
@@ -33,7 +30,7 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                             <state key="normal" title="QUAY LẠI">
-                                <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
                                 <action selector="backBtnActionWithSender:" destination="-1" eventType="touchUpInside" id="XnV-7O-fSR"/>
@@ -56,19 +53,22 @@
                         </button>
                     </subviews>
                 </stackView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cDm-Ni-W0l">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="cDm-Ni-W0l" firstAttribute="top" secondItem="sGS-1Y-NOh" secondAttribute="top" id="AEi-KP-TDh"/>
                 <constraint firstItem="cDm-Ni-W0l" firstAttribute="leading" secondItem="sGS-1Y-NOh" secondAttribute="leading" id="G1h-wG-Hde"/>
                 <constraint firstItem="sGS-1Y-NOh" firstAttribute="trailing" secondItem="SSf-cf-eiD" secondAttribute="trailing" id="TOD-MQ-oiY"/>
                 <constraint firstItem="SSf-cf-eiD" firstAttribute="top" secondItem="cDm-Ni-W0l" secondAttribute="bottom" id="UGw-jH-OWI"/>
                 <constraint firstItem="sGS-1Y-NOh" firstAttribute="trailing" secondItem="cDm-Ni-W0l" secondAttribute="trailing" id="UfK-BT-0HA"/>
                 <constraint firstItem="SSf-cf-eiD" firstAttribute="leading" secondItem="Yqq-UG-lws" secondAttribute="leading" id="hpq-02-DIV"/>
+                <constraint firstItem="cDm-Ni-W0l" firstAttribute="top" secondItem="sGS-1Y-NOh" secondAttribute="top" id="jL4-Da-2qO"/>
                 <constraint firstItem="sGS-1Y-NOh" firstAttribute="bottom" secondItem="SSf-cf-eiD" secondAttribute="bottom" id="xVY-6W-H0L"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="sGS-1Y-NOh"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.44565217391306"/>
         </view>
     </objects>
 </document>
