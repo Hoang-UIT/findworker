@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoViewController" customModule="FindWorker" customModuleProvider="target">
             <connections>
+                <outlet property="addressTextView" destination="3hk-qT-zfn" id="FXh-nU-iYy"/>
+                <outlet property="emailTextField" destination="smh-FP-mjr" id="OGQ-sf-8Qi"/>
+                <outlet property="phoneNumberTextField" destination="4He-SJ-9pT" id="Q13-gM-bUl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,53 +35,57 @@
                                     </state>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-pB-uXc">
-                                    <rect key="frame" x="10" y="177.00000000000003" width="394" height="277.66666666666674"/>
+                                    <rect key="frame" x="10" y="177" width="394" height="393"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3A-W5-Kwl">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="71.333333333333329"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-kC-XOd">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="77"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMo-2M-MTT">
-                                                    <rect key="frame" x="10" y="9.9999999999999982" width="102" height="19.333333333333329"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Email (">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Thay đổi">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.20391999999999999" green="0.78039000000000003" blue="0.34902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=")">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="phamnhatvuong@fmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPy-rV-HCg">
-                                                    <rect key="frame" x="30" y="39.333333333333343" width="354" height="22"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-Yh-Ovl">
+                                                    <rect key="frame" x="10" y="4" width="102" height="41.333333333333336"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Email (">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Thay đổi">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.20391999999999999" green="0.78039000000000003" blue="0.34902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=")">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="emailBtnAction:" destination="-1" eventType="touchUpInside" id="VCh-jh-091"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="phamnhatvuong@fmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smh-FP-mjr">
+                                                    <rect key="frame" x="10" y="49.333333333333343" width="374" height="23.666666666666671"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                                </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstItem="tMo-2M-MTT" firstAttribute="top" secondItem="H3A-W5-Kwl" secondAttribute="top" constant="10" id="Adw-Dh-TPE"/>
-                                                <constraint firstAttribute="bottom" secondItem="wPy-rV-HCg" secondAttribute="bottom" constant="10" id="Ezm-dT-3x9"/>
-                                                <constraint firstItem="tMo-2M-MTT" firstAttribute="leading" secondItem="H3A-W5-Kwl" secondAttribute="leading" constant="10" id="UJR-aN-yue"/>
-                                                <constraint firstItem="wPy-rV-HCg" firstAttribute="leading" secondItem="tMo-2M-MTT" secondAttribute="leading" constant="20" id="UUN-FX-VxA"/>
-                                                <constraint firstItem="wPy-rV-HCg" firstAttribute="top" secondItem="tMo-2M-MTT" secondAttribute="bottom" constant="10" id="cWz-q4-eg1"/>
-                                                <constraint firstAttribute="trailing" secondItem="wPy-rV-HCg" secondAttribute="trailing" constant="10" id="yDg-a6-6b9"/>
+                                                <constraint firstItem="aMg-Yh-Ovl" firstAttribute="top" secondItem="pmw-kC-XOd" secondAttribute="top" constant="4" id="9wh-Yz-6RK"/>
+                                                <constraint firstItem="smh-FP-mjr" firstAttribute="top" secondItem="aMg-Yh-Ovl" secondAttribute="bottom" constant="4" id="BSp-dP-DKT"/>
+                                                <constraint firstItem="aMg-Yh-Ovl" firstAttribute="leading" secondItem="pmw-kC-XOd" secondAttribute="leading" constant="10" id="FIM-hu-tu8"/>
+                                                <constraint firstAttribute="bottom" secondItem="smh-FP-mjr" secondAttribute="bottom" constant="4" id="HKC-Rn-XwK"/>
+                                                <constraint firstAttribute="trailing" secondItem="smh-FP-mjr" secondAttribute="trailing" constant="10" id="MVG-Ck-bWH"/>
+                                                <constraint firstItem="smh-FP-mjr" firstAttribute="leading" secondItem="aMg-Yh-Ovl" secondAttribute="leading" id="nDF-RD-oSO"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -92,51 +99,55 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="En8-eB-p05">
-                                            <rect key="frame" x="0.0" y="81.333333333333314" width="394" height="71.333333333333314"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-7B-0Hx">
+                                            <rect key="frame" x="0.0" y="87" width="394" height="77"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xh-Oy-4Lc">
-                                                    <rect key="frame" x="10" y="9.9999999999999982" width="151" height="19.333333333333329"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Số điện thoại (">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Thay đổi">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.20391999999999999" green="0.78039000000000003" blue="0.34902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=")">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0123456789" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN4-E9-Ewa">
-                                                    <rect key="frame" x="30" y="39.333333333333371" width="354" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUq-aX-L6f">
+                                                    <rect key="frame" x="10" y="4" width="151" height="31"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Số điện thoại (">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Thay đổi">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.20391999999999999" green="0.78039000000000003" blue="0.34902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=")">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="phoneBtnAction:" destination="-1" eventType="touchUpInside" id="MrM-Zh-x1k"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0123456789" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4He-SJ-9pT">
+                                                    <rect key="frame" x="10" y="39" width="374" height="34"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstItem="XN4-E9-Ewa" firstAttribute="leading" secondItem="6xh-Oy-4Lc" secondAttribute="leading" constant="20" id="5jy-OM-IDz"/>
-                                                <constraint firstItem="6xh-Oy-4Lc" firstAttribute="top" secondItem="En8-eB-p05" secondAttribute="top" constant="10" id="DBk-ce-WOH"/>
-                                                <constraint firstAttribute="trailing" secondItem="XN4-E9-Ewa" secondAttribute="trailing" constant="10" id="JBx-3o-HOi"/>
-                                                <constraint firstItem="XN4-E9-Ewa" firstAttribute="top" secondItem="6xh-Oy-4Lc" secondAttribute="bottom" constant="10" id="PPG-pt-YDM"/>
-                                                <constraint firstItem="6xh-Oy-4Lc" firstAttribute="leading" secondItem="En8-eB-p05" secondAttribute="leading" constant="10" id="R9R-3c-6AP"/>
-                                                <constraint firstAttribute="bottom" secondItem="XN4-E9-Ewa" secondAttribute="bottom" constant="10" id="eLM-V5-3Lz"/>
+                                                <constraint firstItem="jUq-aX-L6f" firstAttribute="leading" secondItem="MNk-7B-0Hx" secondAttribute="leading" constant="10" id="04P-Yh-Zc5"/>
+                                                <constraint firstAttribute="trailing" secondItem="4He-SJ-9pT" secondAttribute="trailing" constant="10" id="AQ4-kv-1Z7"/>
+                                                <constraint firstItem="4He-SJ-9pT" firstAttribute="top" secondItem="jUq-aX-L6f" secondAttribute="bottom" constant="4" id="Rxu-yK-RZb"/>
+                                                <constraint firstItem="4He-SJ-9pT" firstAttribute="leading" secondItem="jUq-aX-L6f" secondAttribute="leading" id="V6R-Ef-vm7"/>
+                                                <constraint firstItem="jUq-aX-L6f" firstAttribute="top" secondItem="MNk-7B-0Hx" secondAttribute="top" constant="4" id="mv6-XL-1yr"/>
+                                                <constraint firstAttribute="bottom" secondItem="4He-SJ-9pT" secondAttribute="bottom" constant="4" id="slN-BF-EOb"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -150,51 +161,56 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-3D-PXB">
-                                            <rect key="frame" x="0.0" y="162.66666666666669" width="394" height="115"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzk-0X-HV2">
+                                            <rect key="frame" x="0.0" y="174" width="394" height="219"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qew-vM-tjV">
-                                                    <rect key="frame" x="10.000000000000007" y="9.9999999999999982" width="113.66666666666669" height="19.333333333333329"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Địa Chỉ (">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Thay đổi">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.20391999999999999" green="0.78039000000000003" blue="0.34902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=")">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="14" name="AvenirNext-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Số 364, toà nhà Etown, Đường Cộng Hoà, Phường 16, Quận Tân Bình, Thành Phố Hồ Chí Minh" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-QZ-pvM">
-                                                    <rect key="frame" x="30" y="39.333333333333321" width="354" height="65.666666666666686"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0r-dm-Rf9">
+                                                    <rect key="frame" x="10" y="4" width="111" height="31"/>
+                                                    <state key="normal">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="Địa chỉ (">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Thay đổi">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.20391999999999999" green="0.78039000000000003" blue="0.34902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=")">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="0.33333000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="14" name="AvenirNext-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addressBtnAction:" destination="-1" eventType="touchUpInside" id="KUD-uB-1bh"/>
+                                                    </connections>
+                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="364, toà nhà Etown, đường Cộng Hoà, phường 16, quận Tân Bình, thành phố Hồ Chí Minh" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hk-qT-zfn">
+                                                    <rect key="frame" x="10" y="39" width="374" height="176"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="qx3-QZ-pvM" secondAttribute="bottom" constant="10" id="6wG-zu-gUa"/>
-                                                <constraint firstItem="qew-vM-tjV" firstAttribute="top" secondItem="Bgm-3D-PXB" secondAttribute="top" constant="10" id="DRm-5K-ocA"/>
-                                                <constraint firstItem="qew-vM-tjV" firstAttribute="leading" secondItem="Bgm-3D-PXB" secondAttribute="leading" constant="10" id="H3l-1l-SJf"/>
-                                                <constraint firstItem="qx3-QZ-pvM" firstAttribute="top" secondItem="qew-vM-tjV" secondAttribute="bottom" constant="10" id="Hrf-I9-5nH"/>
-                                                <constraint firstAttribute="trailing" secondItem="qx3-QZ-pvM" secondAttribute="trailing" constant="10" id="QGS-N3-far"/>
-                                                <constraint firstItem="qx3-QZ-pvM" firstAttribute="leading" secondItem="qew-vM-tjV" secondAttribute="leading" constant="20" id="cVe-ft-8pa"/>
+                                                <constraint firstItem="3hk-qT-zfn" firstAttribute="leading" secondItem="I0r-dm-Rf9" secondAttribute="leading" id="CQF-Do-qSP"/>
+                                                <constraint firstItem="I0r-dm-Rf9" firstAttribute="top" secondItem="qzk-0X-HV2" secondAttribute="top" constant="4" id="HS4-TF-zNx"/>
+                                                <constraint firstAttribute="bottom" secondItem="3hk-qT-zfn" secondAttribute="bottom" constant="4" id="Hpi-Su-oJz"/>
+                                                <constraint firstItem="3hk-qT-zfn" firstAttribute="top" secondItem="I0r-dm-Rf9" secondAttribute="bottom" constant="4" id="MGY-Yc-JIv"/>
+                                                <constraint firstItem="I0r-dm-Rf9" firstAttribute="leading" secondItem="qzk-0X-HV2" secondAttribute="leading" constant="10" id="MLO-Yr-lKa"/>
+                                                <constraint firstAttribute="trailing" secondItem="3hk-qT-zfn" secondAttribute="trailing" constant="10" id="VnG-qs-TGV"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -209,7 +225,21 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qzk-0X-HV2" firstAttribute="top" secondItem="PLE-pB-uXc" secondAttribute="top" constant="174" id="Oga-3E-TuZ"/>
+                                        <constraint firstItem="qzk-0X-HV2" firstAttribute="top" secondItem="MNk-7B-0Hx" secondAttribute="bottom" constant="10" id="hJr-0G-w86"/>
+                                    </constraints>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25D-GE-kkE">
+                                    <rect key="frame" x="163" y="590" width="88" height="37"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                    <state key="normal" title="Đăng Xuất">
+                                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="logoutBtnActionWithSender:" destination="-1" eventType="touchUpInside" id="nTo-2Q-bDh"/>
+                                    </connections>
+                                </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_user_img" translatesAutoresizingMaskIntoConstraints="NO" id="hOA-ou-9dE">
                                     <rect key="frame" x="157" y="20" width="100" height="100"/>
                                     <constraints>
@@ -222,27 +252,17 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25D-GE-kkE">
-                                    <rect key="frame" x="163" y="474.66666666666669" width="88" height="37"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
-                                    <state key="normal" title="Đăng Xuất">
-                                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="logoutBtnActionWithSender:" destination="-1" eventType="touchUpInside" id="nTo-2Q-bDh"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="PLE-pB-uXc" firstAttribute="top" secondItem="7kR-yB-18m" secondAttribute="bottom" constant="10" id="5ZZ-Tn-0Jb"/>
                                 <constraint firstItem="7kR-yB-18m" firstAttribute="centerX" secondItem="hOA-ou-9dE" secondAttribute="centerX" id="7M0-EH-NHw"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="25D-GE-kkE" secondAttribute="bottom" constant="20" id="7Wq-3i-FAL"/>
                                 <constraint firstItem="7kR-yB-18m" firstAttribute="top" secondItem="hOA-ou-9dE" secondAttribute="bottom" constant="10" id="7pe-ao-3yW"/>
                                 <constraint firstItem="25D-GE-kkE" firstAttribute="top" secondItem="PLE-pB-uXc" secondAttribute="bottom" constant="20" id="8cJ-xM-Ghq"/>
                                 <constraint firstItem="25D-GE-kkE" firstAttribute="centerX" secondItem="4cA-dV-NFV" secondAttribute="centerX" id="H7Z-xI-p26"/>
                                 <constraint firstItem="hOA-ou-9dE" firstAttribute="top" secondItem="4cA-dV-NFV" secondAttribute="top" constant="20" id="MPj-pT-J5L"/>
                                 <constraint firstAttribute="trailing" secondItem="PLE-pB-uXc" secondAttribute="trailing" constant="10" id="VXB-IY-l3f"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="25D-GE-kkE" secondAttribute="bottom" constant="20" id="gHd-AN-HKz"/>
                                 <constraint firstItem="PLE-pB-uXc" firstAttribute="leading" secondItem="4cA-dV-NFV" secondAttribute="leading" constant="10" id="wdN-an-nAj"/>
                                 <constraint firstItem="hOA-ou-9dE" firstAttribute="centerX" secondItem="4cA-dV-NFV" secondAttribute="centerX" id="z3O-SO-GYT"/>
                             </constraints>
@@ -267,7 +287,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="8.6956521739130448" y="28.532608695652176"/>
+            <point key="canvasLocation" x="-10.144927536231885" y="-351.35869565217394"/>
         </view>
     </objects>
     <resources>
