@@ -46,9 +46,9 @@ class ListWorkViewController: BaseViewController {
     }
     
     func updateData() {
-        order?.services.removeAll(where: { (service) -> Bool in
-            return !service.isSelected
-        })
+//        order?.services.removeAll(where: { (service) -> Bool in
+//            return !service.isSelected
+//        })
         tableView.reloadData()
     }
     
@@ -86,7 +86,7 @@ extension ListWorkViewController: UITableViewDataSource {
                 cell.delegate = self
             }
             if let service = order?.services[indexPath.row] {
-                cell.loadData(service, .ListWorkViewController, isEditingTableView)
+                cell.loadData(service, true,.ListWorkViewController, isEditingTableView)
             }
             return cell
         }
@@ -107,20 +107,22 @@ extension ListWorkViewController: UITableViewDelegate {
 }
 
 extension ListWorkViewController: ServiceTableViewCellDelegate {
-    func serviceTableViewCell(_ cell: ServiceTableViewCell, serviceDetail: ServiceDetailModel) {
-        
+    func serviceTableViewCell(_ cell: ServiceTableViewCell, serviceDetail: ServiceDetailModel, isSelected: Bool) {
+        if isSelected {
+            order?.addServiceDetail(model: serviceDetail)
+        } else {
+            order?.removeServiceDetail(model: serviceDetail)
+        }
     }
 }
 
 
 extension ListWorkViewController: ServiceDetailViewControllerDelegate {
-    func serviceDetailViewController(_ viewController: ServiceDetailViewController, serviceDetail: ServiceDetailModel?) {
-        if let serviceDetail = serviceDetail {
-            for service in order?.services ?? [] {
-                if service.id == serviceDetail.id {
-                    service.isSelected = serviceDetail.isSelected
-                }
-            }
+    func serviceDetailViewController(_ viewController: ServiceDetailViewController, serviceDetail: ServiceDetailModel, isSelected: Bool) {
+        if isSelected {
+            order?.addServiceDetail(model: serviceDetail)
+        } else {
+            order?.removeServiceDetail(model: serviceDetail)
         }
     }
 }

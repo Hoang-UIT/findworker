@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50C8D092511A63800306BCA /* ServiceDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50C8D082511A63800306BCA /* ServiceDetailModel.swift */; };
+		C50C8D0B2511A85400306BCA /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50C8D0A2511A85400306BCA /* ServiceModel.swift */; };
 		C50EB8C32500959F007E06C4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50EB8C22500959F007E06C4 /* MapKit.framework */; };
 		C50EB8C72501DD5F007E06C4 /* ListWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50EB8C52501DD5F007E06C4 /* ListWorkViewController.swift */; };
 		C50EB8C82501DD5F007E06C4 /* ListWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C50EB8C62501DD5F007E06C4 /* ListWorkViewController.xib */; };
@@ -63,7 +65,6 @@
 		C5693FCC24EF7E8200D37F5A /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FCB24EF7E8200D37F5A /* ForgetPasswordViewController.swift */; };
 		C5693FD024EFB6FA00D37F5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FCF24EFB6FA00D37F5A /* HomeViewController.swift */; };
 		C5693FD324EFB98800D37F5A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD224EFB98800D37F5A /* UIColor+Extension.swift */; };
-		C5693FD624EFC7CD00D37F5A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD524EFC7CD00D37F5A /* Service.swift */; };
 		C5693FD824EFC93E00D37F5A /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD724EFC93E00D37F5A /* ServiceTableViewCell.swift */; };
 		C5693FDA24EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5693FD924EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift */; };
 		C5C830F424F39B70000E542A /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C830F324F39B70000E542A /* MainMenuView.swift */; };
@@ -99,6 +100,8 @@
 /* Begin PBXFileReference section */
 		46E33E13FA0540ACFFB8B8F2 /* Pods_FindWorker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWorker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5105A8C67C9E554539BFE608 /* Pods-FindWorker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWorker.debug.xcconfig"; path = "Target Support Files/Pods-FindWorker/Pods-FindWorker.debug.xcconfig"; sourceTree = "<group>"; };
+		C50C8D082511A63800306BCA /* ServiceDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailModel.swift; sourceTree = "<group>"; };
+		C50C8D0A2511A85400306BCA /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		C50EB8C22500959F007E06C4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C50EB8C52501DD5F007E06C4 /* ListWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWorkViewController.swift; sourceTree = "<group>"; };
 		C50EB8C62501DD5F007E06C4 /* ListWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListWorkViewController.xib; sourceTree = "<group>"; };
@@ -157,7 +160,6 @@
 		C5693FCB24EF7E8200D37F5A /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		C5693FCF24EFB6FA00D37F5A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C5693FD224EFB98800D37F5A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		C5693FD524EFC7CD00D37F5A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		C5693FD724EFC93E00D37F5A /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceTableViewCell.swift; path = ../ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		C5693FD924EFCFCA00D37F5A /* UIBarButtonItem+Badge.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Badge.swift.swift"; sourceTree = "<group>"; };
 		C5C830F324F39B70000E542A /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
@@ -468,8 +470,9 @@
 		C5693FD424EFC7C200D37F5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C5693FD524EFC7CD00D37F5A /* Service.swift */,
 				C5434BFF250A1B3F00716EC6 /* OrderModel.swift */,
+				C50C8D082511A63800306BCA /* ServiceDetailModel.swift */,
+				C50C8D0A2511A85400306BCA /* ServiceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -744,9 +747,9 @@
 				C5C8311824F76A65000E542A /* UIview+Extension.swift in Sources */,
 				C53D24F324FE51B7004739B4 /* AddressTableViewCell.swift in Sources */,
 				C5C8310824F615B5000E542A /* FilterWorkerView.swift in Sources */,
+				C50C8D0B2511A85400306BCA /* ServiceModel.swift in Sources */,
 				C5E475FF24FCD78900062A4D /* TermsAndPolicyView.swift in Sources */,
 				C536FA1A24F8DE040075CCBE /* FilterOrderView.swift in Sources */,
-				C5693FD624EFC7CD00D37F5A /* Service.swift in Sources */,
 				C5F5327924EE5EF100B1BF78 /* BaseViewController.swift in Sources */,
 				C5C8310324F51880000E542A /* ListWorkerViewController.swift in Sources */,
 				C536FA0324F8A5770075CCBE /* ConfirmOrderViewController.swift in Sources */,
@@ -776,6 +779,7 @@
 				C5C830FD24F4C769000E542A /* ServiceDetailViewController.swift in Sources */,
 				C5C830F924F3CF2C000E542A /* ServiceSectionView.swift in Sources */,
 				C5F5327B24EE727E00B1BF78 /* LaunchScreenViewController.swift in Sources */,
+				C50C8D092511A63800306BCA /* ServiceDetailModel.swift in Sources */,
 				C536FA1624F8DDD70075CCBE /* ListOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -929,7 +933,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rakumo.FindWorker;
+				PRODUCT_BUNDLE_IDENTIFIER = Rakumo.FindWorker.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -949,7 +953,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Rakumo.FindWorker;
+				PRODUCT_BUNDLE_IDENTIFIER = Rakumo.FindWorker.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

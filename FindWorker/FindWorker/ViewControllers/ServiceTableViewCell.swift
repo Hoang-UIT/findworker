@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ServiceTableViewCellDelegate: class {
-    func serviceTableViewCell( _ cell: ServiceTableViewCell, serviceDetail: ServiceDetailModel)
+    func serviceTableViewCell( _ cell: ServiceTableViewCell, serviceDetail: ServiceDetailModel, isSelected: Bool)
 }
 
 class ServiceTableViewCell: UITableViewCell {
@@ -33,26 +33,23 @@ class ServiceTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func loadData(_ service: ServiceDetailModel, _ type: ServiceTableViewCellType? = nil, _ isEditing: Bool? = false) {
+    func loadData(_ service: ServiceDetailModel,_ isSelected: Bool, _ type: ServiceTableViewCellType? = nil, _ isEditing: Bool? = false) {
         if let type = type, type == .ListWorkViewController {
             leftConstraintContentView.constant = 10.0
             if let isEditing = isEditing {
                 checkboxButton.isHidden = !isEditing
             }
         }
-
         self.serviceDetail = service
         nameServiceLabel.text = service.name
-        checkboxButton.isSelected = service.isSelected
+        checkboxButton.isSelected = isSelected
     }
     
     @IBAction func selectBtnAction(_ sender: UIButton) {
         if let serviceDetail = serviceDetail {
-            serviceDetail.isSelected = !serviceDetail.isSelected
-            self.serviceDetail = serviceDetail
-            sender.isSelected = serviceDetail.isSelected
+            sender.isSelected = !sender.isSelected
             if delegate != nil {
-                delegate?.serviceTableViewCell(self, serviceDetail: serviceDetail)
+                delegate?.serviceTableViewCell(self, serviceDetail: serviceDetail, isSelected: sender.isSelected)
             }
         }
     }

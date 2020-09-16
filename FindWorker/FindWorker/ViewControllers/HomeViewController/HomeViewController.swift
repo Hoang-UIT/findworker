@@ -30,7 +30,7 @@ class HomeViewController: BaseViewController {
         ServiceModel(10,"Dịch Vụ Sửa Nước", "tho_sua_nuoc_img"),
     ]
     
-    var order = OrderModel()
+    var order: OrderModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +46,12 @@ class HomeViewController: BaseViewController {
         tableView.rowHeight = 80.0
         
         removeTapGestureEndEditing()
+        order = OrderModel.getOrder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        updateBadgeOfShopCart(nil)
+        updateBadgeOfShopCart()
     }
 
     @objc func showMainMenu() {
@@ -60,6 +61,9 @@ class HomeViewController: BaseViewController {
     }
     
     @objc func goToListWorkViewController() {
+        guard let order = order else {
+            return
+        }
         if order.services.count > 0 {
             let viewController = ListWorkViewController.loadFromNib()
             viewController.delegate = self
@@ -72,21 +76,26 @@ class HomeViewController: BaseViewController {
         }
     }
     
-    func updateBadgeOfShopCart(_ serviceDetail: ServiceDetailModel?) {
-        order.services.removeAll()
-        var serviceSelected = 0
-        for service in services {
-            service.listServiceDetail = service.listServiceDetail.map { (item) -> ServiceDetailModel in
-                if service.id == serviceDetail?.serviceId  && item.id == serviceDetail?.id {
-                    item.isSelected = serviceDetail?.isSelected ?? false
-                }
-                return item
+    func checkExistedInOrder(_ serviceDetail: ServiceDetailModel) -> Bool {
+        let isSelected = order?.services.contains(where: { (data) -> Bool in
+            if serviceDetail.serviceId == data.serviceId && serviceDetail.id == data.id {
+                return true
             }
-            let filter = service.listServiceDetail.filter{$0.isSelected}
-            order.services.append(contentsOf: filter)
-            serviceSelected += filter.count
+            return false
+        })
+        return isSelected ??  false
+    }
+    
+    func updateBadgeOfShopCart(_ serviceDetail: ServiceDetailModel? = nil, _ isSelected: Bool? = nil) {
+
+        if let serviceDetail = serviceDetail, let isSelected = isSelected {
+            if isSelected {
+                order?.addServiceDetail(model: serviceDetail)
+            } else {
+                order?.removeServiceDetail(model: serviceDetail)
+            }
         }
-        rightBarButton?.setBadge(text: "\(serviceSelected)")
+        rightBarButton?.setBadge(text: "\(order?.services.count ?? 0)")
     }
     
     @IBAction func nextBtnAction(_ sender: UIButton) {
@@ -111,8 +120,10 @@ extension HomeViewController: UITableViewDataSource {
             if cell.delegate == nil {
                 cell.delegate = self
             }
-            let service = services[indexPath.section].listServiceDetail[indexPath.row]
-            cell.loadData(service)
+            let serviceDetail = services[indexPath.section].listServiceDetail[indexPath.row]
+            let isSelected = checkExistedInOrder(serviceDetail)
+            
+            cell.loadData(serviceDetail, isSelected)
             return cell
         }
         return UITableViewCell()
@@ -138,17 +149,19 @@ extension HomeViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         
         let service = services[indexPath.section]
+        let serviceDetail = service.listServiceDetail[indexPath.row]
         let serviceDetailViewController = ServiceDetailViewController.loadFromNib()
         serviceDetailViewController.delegate = self
         serviceDetailViewController.service = service
         serviceDetailViewController.serviceDetail = service.listServiceDetail[indexPath.row]
+        serviceDetailViewController.isSelected = checkExistedInOrder(serviceDetail)
         navigationController?.pushViewController(serviceDetailViewController, animated: true)
     }
 }
 
 extension HomeViewController: ServiceTableViewCellDelegate {
-    func serviceTableViewCell(_ cell: ServiceTableViewCell, serviceDetail: ServiceDetailModel) {
-        updateBadgeOfShopCart(serviceDetail)
+    func serviceTableViewCell(_ cell: ServiceTableViewCell, serviceDetail: ServiceDetailModel, isSelected: Bool) {
+        updateBadgeOfShopCart(serviceDetail, isSelected)
     }
 }
 
@@ -181,16 +194,17 @@ extension HomeViewController: MainMenuViewDelegate {
 
 extension HomeViewController: ListWorkViewControllerDelegate {
     func listWorkViewController(_ viewController: ListWorkViewController, _ data: OrderModel) {
-        for serviceDetail in data.services {
-            let filter = services.filter{$0.id == serviceDetail.serviceId}
-            filter.filter{$0.id == serviceDetail.id}.first?.isSelected = serviceDetail.isSelected
-        }
-        tableView.reloadData()
+        self.order = data
         updateBadgeOfShopCart(nil)
+        tableView.reloadData()
     }
 }
 
 extension HomeViewController: ServiceDetailViewControllerDelegate {
+    func serviceDetailViewController(_ viewController: ServiceDetailViewController, serviceDetail: ServiceDetailModel, isSelected: Bool) {
+        updateBadgeOfShopCart(serviceDetail, isSelected)
+    }
+    
     func serviceDetailViewController(_ viewController: ServiceDetailViewController, serviceDetail: ServiceDetailModel?) {
         if let serviceDetail = serviceDetail {
             updateBadgeOfShopCart(serviceDetail)

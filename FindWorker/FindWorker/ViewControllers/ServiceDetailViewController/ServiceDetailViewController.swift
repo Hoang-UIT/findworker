@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 protocol ServiceDetailViewControllerDelegate: class {
-    func serviceDetailViewController(_ viewController: ServiceDetailViewController, serviceDetail: ServiceDetailModel?)
+    func serviceDetailViewController(_ viewController: ServiceDetailViewController, serviceDetail: ServiceDetailModel, isSelected: Bool)
 }
 class ServiceDetailViewController: BaseViewController {
 
@@ -23,7 +23,7 @@ class ServiceDetailViewController: BaseViewController {
     var isHiddenBottomView = false
     var service: ServiceModel?
     var serviceDetail: ServiceDetailModel?
-    
+    var isSelected = false
     override func viewDidLoad() {
         super.viewDidLoad()
         title = service?.name ?? "Vệ Sinh Máy Lạnh"
@@ -32,9 +32,7 @@ class ServiceDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bottomView.isHidden = isHiddenBottomView
-        if let serviceDetail = serviceDetail {
-            addButton.backgroundColor = serviceDetail.isSelected ? UIColor.red : Constants.ColorApp.mainColor
-        }
+        addButton.backgroundColor = isSelected ? UIColor.red : Constants.ColorApp.mainColor
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,10 +58,10 @@ class ServiceDetailViewController: BaseViewController {
     
     @IBAction func addBtnAction(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        sender.backgroundColor = sender.isSelected ? UIColor.red : Constants.ColorApp.mainColor
-        serviceDetail?.isSelected = sender.isSelected
-        if delegate != nil {
-            delegate?.serviceDetailViewController(self, serviceDetail: serviceDetail)
+        isSelected = sender.isSelected
+        sender.backgroundColor = isSelected ? UIColor.red : Constants.ColorApp.mainColor
+        if delegate != nil, let serviceDetail = serviceDetail {
+            delegate?.serviceDetailViewController(self, serviceDetail: serviceDetail, isSelected: isSelected)
         }
     }
 }
