@@ -15,6 +15,9 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let className = String(describing: type(of: self))
+        print("ViewController: [\(className)]")
+        
         tapGestureEndEditing = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGestureEndEditing ?? UITapGestureRecognizer())
         if (navigationController != nil) {

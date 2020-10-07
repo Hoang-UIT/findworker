@@ -13,6 +13,7 @@ class ListOrderViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var statusOrder = StatusOrder.status_7
+    var orders = [OrderModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class ListOrderViewController: BaseViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        orders = OrderModel.getOrders()
     }
     
     @objc func showTypeOrder() {
@@ -39,12 +42,13 @@ class ListOrderViewController: BaseViewController {
 
 extension ListOrderViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "OrderItemTableViewCell") as? OrderItemTableViewCell {
-            cell.updateData(status: statusOrder)
+            let order = orders[indexPath.row]
+            cell.updateData(order)
             return cell
         }
         
@@ -55,6 +59,8 @@ extension ListOrderViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         let viewController = ConfirmOrderViewController.loadFromNib()
         viewController.isHiddenBottomContentView = true
+        let order = orders[indexPath.row]
+        viewController.order = order
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

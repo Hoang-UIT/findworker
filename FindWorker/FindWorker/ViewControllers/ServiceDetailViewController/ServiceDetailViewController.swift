@@ -32,14 +32,8 @@ class ServiceDetailViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bottomView.isHidden = isHiddenBottomView
+        addButton.isSelected = isSelected
         addButton.backgroundColor = isSelected ? UIColor.red : Constants.ColorApp.mainColor
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        addButton.isSelected = serviceDetail?.isSelected ?? false
-        
         if let filepath = Bundle.main.path(forResource: "content", ofType: "html") {
             do {
                 let contents = try String(contentsOfFile: filepath)

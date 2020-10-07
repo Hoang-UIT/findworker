@@ -13,10 +13,13 @@ class ConfirmOrderViewController: BaseViewController {
     @IBOutlet weak var paymentLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bottomContentView: UIStackView!
+    @IBOutlet weak var highConstraintTableView: NSLayoutConstraint!
+    var order: OrderModel?
+    
     
     var paymentType = PaymentType.Cashing
     var isHiddenBottomContentView = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         removeTapGestureEndEditing()
@@ -28,6 +31,14 @@ class ConfirmOrderViewController: BaseViewController {
         titleViewController = "Đơn Hàng"
         
         bottomContentView.isHidden = isHiddenBottomContentView
+    }
+          
+    override func viewWillLayoutSubviews() {
+        super.updateViewConstraints()
+        DispatchQueue.main.async {
+            self.highConstraintTableView.constant = self.tableView.contentSize.height
+            self.view.layoutIfNeeded()
+        }
     }
     
     @IBAction func cancelBtnAction(_ sender: UIButton) {
@@ -53,11 +64,14 @@ class ConfirmOrderViewController: BaseViewController {
 
 extension ConfirmOrderViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return order?.services.count ?? 0 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WorkItemTableViewCell") as? WorkItemTableViewCell {
+            if let service = order?.services[indexPath.row] {
+                cell.loadData(service)
+            }
             return cell
         }
         return UITableViewCell()
@@ -72,6 +86,9 @@ extension ConfirmOrderViewController: UITableViewDelegate {
             
             navigationController?.pushViewController(viewController, animated: true)
         }
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        viewWillLayoutSubviews()
     }
 }
 

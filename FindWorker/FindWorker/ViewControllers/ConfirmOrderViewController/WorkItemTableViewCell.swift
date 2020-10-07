@@ -10,8 +10,14 @@ import UIKit
 
 class WorkItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameServiceLabel: UILabel!
+    @IBOutlet weak var priceServiceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    func loadData(_ service: ServiceDetailModel) {
+        nameServiceLabel.text = service.name ?? ""
     }
 }

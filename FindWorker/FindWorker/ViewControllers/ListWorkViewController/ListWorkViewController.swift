@@ -97,12 +97,14 @@ extension ListWorkViewController: UITableViewDataSource {
 extension ListWorkViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        
-        let service = order?.services[indexPath.section]
-        let serviceDetailViewController = ServiceDetailViewController.loadFromNib()
-        serviceDetailViewController.delegate = self
-        serviceDetailViewController.serviceDetail = service
-        navigationController?.pushViewController(serviceDetailViewController, animated: true)
+        if !isEditingTableView {
+            let service = order?.services[indexPath.section]
+            let serviceDetailViewController = ServiceDetailViewController.loadFromNib()
+            serviceDetailViewController.delegate = self
+            serviceDetailViewController.serviceDetail = service
+            serviceDetailViewController.isSelected = true
+            navigationController?.pushViewController(serviceDetailViewController, animated: true)
+        }
     }
 }
 
